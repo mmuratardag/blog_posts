@@ -39,7 +39,7 @@ vignettes/*.pdf
 .Renviron
 
 # Other files
-.Rmd
-.xlsx
-.txt
+*.Rmd
+*.xlsx
+*.txt
 
