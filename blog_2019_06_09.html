@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>MMA, Ph.D., BlogPost: 09/06/2019</title>
+
+<script src="site_libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 52px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h2 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h3 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h4 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h5 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h6 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">M. Murat Ardag, Ph.D.</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://mmuratardag.github.io">Go back to the data science website</a>
+</li>
+<li>
+  <a href="https://mmuratardag.github.io/academic_website">Go back to the academic website</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br /></p>
+<div id="juxtaposing-psychometrics-topic-modeling-and-social-network-analysis-to-model-competing-nationalist-discourses" class="section level1">
+<h1>Juxtaposing psychometrics, topic modeling, and social network analysis to model competing nationalist discourses</h1>
+<p>Let’s entertain an idea… an elaborate idea… that is <em>people choose ideas, but ideas also choose people</em>. This is known as the <strong><em>elective affinities</em></strong> – there is a “selective process by which ideas and their publics are bound together through forces of mutual attraction”. In other words, “there is a marketplace for things like ideologies, discourses, in which people are relatively free to choose ideologies and discourses that correspond to their own psychological needs” (Jost, 2017; Jost, Federico, &amp; Napier, 2009).</p>
+<p>The focus here is the discourses defined in the broadest sense: discourses</p>
+<ul>
+<li>are all the things that are said &amp; written,</li>
+<li>reproduce through any sort of communication,</li>
+<li>provide packages of information that
+<ul>
+<li>structure cognition/perceptions</li>
+<li>draw a comprehensive vision of the word.</li>
+</ul></li>
+</ul>
+<p><strong>Nationalism as a discourse</strong>: Nationalism is best understood as a particular form of discourse that constructs an image for the nation (Ozkirimli, 2017). Since nationalism operates as a discourse, it provides stories/narratives/packages of information on collective identity, as well as collective memory, and social representations of history. Nationalism tells us who we are, what/where we have been via spoken and/or written account of connected events (Hammack &amp; Pilecki, 2012, 2014).</p>
+<p><strong>Multiple nationalisms</strong>: Since we are talking about nationalism as a discourse, we are looking at plural stories that contest and negotiate with one another. According to Ozkirimli (2017), multiple discourses compete for hegemony to no avail because … well … stories/ideas/collective representations do not disappear into thin air. Stories/ideas/collective representations merge… they become less salient… they come back in the right context… Therefore, there can never be a hegemony of one discourse.</p>
+<p><strong>Nationalism and complex systems</strong>: Surely, nationalism is at the core of many severe global problems and catastrophes. However, that does not change the fact that it has been involved in shaping human history in one form or another for centuries now, which suggests that it might provide some secondary-benefits in organizing complex social/collective units. Kaufmann (2017) argues that nationalism is an emergent phenomenon using the workings of complexity; he discusses <em>distributed knowledge</em> and suggests that social-units like nations can harness the dispersed local and temporal information-packages of this <em>distributed knowledge</em>.</p>
+<p>The ideas on nationalism(s) operating as discourses and nationalism being an emergent phenomenon and benefiting from <em>distributed knowledge</em> are all complementary to the <strong><em>elective affinities</em></strong>. So, the idea to entertain in this blog post is to model the <strong><em>elective affinities</em></strong> within the domain of nationalistic discourses. I do this by bringing together some techniques from psychometrics, structural topic modeling social network modeling.</p>
+<p>The data here is a convenient Turkish sample from 2016. Participants responded to standardized scales; they also answered an open-ended question which asked them what it means to be Turkish to them. The following are the variables and their explanations. All values are normalized (ranging between 0-1) factor scores from CFA measurement models(, which are not shown here).</p>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="18%" />
+<col width="64%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable abbreviation</th>
+<th>Construct</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Av_</td>
+<td>Avoidant attachment style</td>
+<td>higher scores indicate being aloof and emotionally distant in close relationships</td>
+</tr>
+<tr class="even">
+<td>An_</td>
+<td>Anxious attachment style</td>
+<td>higher scores indicate being clingy, rejection-sensitive in close relationships and a tendency to adopt the role of a pursuer</td>
+</tr>
+<tr class="odd">
+<td>CN_</td>
+<td>Collective Narcissism</td>
+<td>higher scores indicate an exaggerated emotional investment in “an unrealistic psychologically-fragile belief in the nation’s greatness contingent on external validation” (Cichocka, 2016; Golec de Zavala, 2017)</td>
+</tr>
+<tr class="even">
+<td>bp_</td>
+<td>Blind Patriotism</td>
+<td>higher scores indicate an uncritical allegiance to the country</td>
+</tr>
+<tr class="odd">
+<td>cp_</td>
+<td>Constructive Patriotism</td>
+<td>higher scores indicate a constructively critical allegiance to the country and a desire for positive change</td>
+</tr>
+</tbody>
+</table>
+<p>Below is the path model that shows structural relationships. The model is straightforward: attachment style predicts collective narcissism, which in turn predicts patriotisms. For a more elaborate model and explanation (including other variables) as well as a country comparison, take a look at <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3321204">(Ardag, Cohrs, and Selck (2019)</a>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p><img src="blog_2019_06_09_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>The significant coefficients are displayed in the table below.</p>
+<table>
+<caption>Regression coefficients</caption>
+<thead>
+<tr class="header">
+<th align="left">Latent Factor</th>
+<th align="left">Predictor</th>
+<th align="right">B</th>
+<th align="right">SE</th>
+<th align="right">Z</th>
+<th align="right">Beta</th>
+<th align="left">sig</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">cpat_fs</td>
+<td align="left">CN_fs</td>
+<td align="right">0.32</td>
+<td align="right">0.05</td>
+<td align="right">6.17</td>
+<td align="right">0.47</td>
+<td align="left">***</td>
+</tr>
+<tr class="even">
+<td align="left">cpat_fs</td>
+<td align="left">Anx_fs</td>
+<td align="right">0.03</td>
+<td align="right">0.05</td>
+<td align="right">0.54</td>
+<td align="right">0.03</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">cpat_fs</td>
+<td align="left">Avd_fs</td>
+<td align="right">-0.11</td>
+<td align="right">0.06</td>
+<td align="right">-1.77</td>
+<td align="right">-0.11</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">bpat_fs</td>
+<td align="left">CN_fs</td>
+<td align="right">0.55</td>
+<td align="right">0.04</td>
+<td align="right">14.71</td>
+<td align="right">0.70</td>
+<td align="left">***</td>
+</tr>
+<tr class="odd">
+<td align="left">bpat_fs</td>
+<td align="left">Anx_fs</td>
+<td align="right">0.04</td>
+<td align="right">0.05</td>
+<td align="right">0.83</td>
+<td align="right">0.04</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">bpat_fs</td>
+<td align="left">Avd_fs</td>
+<td align="right">0.03</td>
+<td align="right">0.05</td>
+<td align="right">0.63</td>
+<td align="right">0.03</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">CN_fs</td>
+<td align="left">Anx_fs</td>
+<td align="right">0.21</td>
+<td align="right">0.09</td>
+<td align="right">2.42</td>
+<td align="right">0.18</td>
+<td align="left">*</td>
+</tr>
+<tr class="even">
+<td align="left">CN_fs</td>
+<td align="left">Avd_fs</td>
+<td align="right">0.03</td>
+<td align="right">0.10</td>
+<td align="right">0.25</td>
+<td align="right">0.02</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>I take out the avoidant attachment style (no significant association) and proceed with latent profile analysis using the four variables.</p>
+<p>The results look like the following. There are four estimated profiles.</p>
+<p><img src="blog_2019_06_09_files/figure-html/unnamed-chunk-6-1.png" width="1440" /><img src="blog_2019_06_09_files/figure-html/unnamed-chunk-6-2.png" width="1440" /></p>
+<p>Descriptive statistics are below. Profile 1 is low on blind patriotism; average on constructive patriotism; is spread across the range with collective narcissism and anxious style. Profile 2 is spread all over the range of blind patriotism &amp; anxious attachment style; high on constructive patriotism &amp; collective narcissism. Profile 3 is low on everything. Profile 4 is spread across blind &amp; constructive patriotism ranges; has much overlap with Profile 2 on attachment style and collective narcissism traits.</p>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="20%" />
+<col width="27%" />
+<col width="24%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Anxious At.St. M(sD)</th>
+<th>Collective Narciss. M(sD)</th>
+<th>Constructive Pat. M(sD)</th>
+<th>Blind Pat. M(sD)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Profile 1</td>
+<td>0.414 (0.26)</td>
+<td>0.326 (0.15)</td>
+<td>0.834 (0.13)</td>
+<td>0.100 (0.04)</td>
+</tr>
+<tr class="even">
+<td>Profile 2</td>
+<td>0.401 (0.23)</td>
+<td>0.759 (0.12)</td>
+<td>0.973 (0.02)</td>
+<td>0.351 (0.21)</td>
+</tr>
+<tr class="odd">
+<td>Profile 3</td>
+<td>0.251 (0.19)</td>
+<td>0.082 (0.09)</td>
+<td>0.509 (0.30)</td>
+<td>0.047 (0.02)</td>
+</tr>
+<tr class="even">
+<td>Profile 4</td>
+<td>0.454 (0.22)</td>
+<td>0.663 (0.20)</td>
+<td>0.777 (0.11)</td>
+<td>0.484 (0.19)</td>
+</tr>
+</tbody>
+</table>
+<pre><code>##         vars   n mean   sd median trimmed  mad min max range  skew kurtosis
+## Anx_fs     1 217 0.40 0.24   0.40    0.39 0.25   0   1     1  0.31    -0.46
+## CN_fs      2 217 0.51 0.28   0.54    0.51 0.33   0   1     1 -0.10    -1.05
+## cpat_fs    3 217 0.83 0.19   0.89    0.86 0.14   0   1     1 -2.06     5.31
+## bpat_fs    4 217 0.26 0.22   0.17    0.23 0.17   0   1     1  1.05     0.26
+##           se
+## Anx_fs  0.02
+## CN_fs   0.02
+## cpat_fs 0.01
+## bpat_fs 0.02</code></pre>
+<p>In the next step, I use the profiles and some other covariates to estimate topics with structural topic modeling. Estimated topics should correspond to how these profiles perceive and frame their national identity. The results show that a four topics solution provide the most meaningful results, which is not surprising and new (again, refer to Ardag et al. 2018 for further details). I’m just finding/confirming what previous scholars were discussing about nationalistic discourses in Turkey (Bora, 2003, 2011; Özkırımlı, 2011).</p>
+<p>Below are some highlights from the topic estimation.</p>
+<p><img src="blog_2019_06_09_files/figure-html/unnamed-chunk-9-1.png" width="1440" /></p>
+<p>The first topic frames Turkishness by referencing citizenship, geography, shared culture, and feeling (one interpretation of the founding ideology of Kemalism). The parts of the open responses that fall into the second topic make references to ethnicity. The third topic captures frames that make references to both ethnicity and religion. The framing in the fourth topic is close to topic 1; but there is much additional reference to the founding father of Turkey, Atatürk, and the tone and interpretation of Kemalism are different for this topic.</p>
+<p><strong><em>Elective affinities – people choosing ideas</em></strong>: The benefit of stm here is its mixed-group membership model. Since all open ended responses include words associated with all different estimated topics, we can extract relevant information on the estimated topics, and their covariates. Below is some selected relevant information on <em>people choosing ideas</em>.</p>
+<p><img src="blog_2019_06_09_files/figure-html/unnamed-chunk-11-1.png" width="1440" /></p>
+<p>In a nutshell, for topic 1, there are significant differences between p2 - p1, p4 - p2 and p4 - p3. Nothing is going on for topic 2. For topic 3, the significant differences are between p3 - p1, p3 - p2, and p4 - p3. Almost all profiles are significantly different from one another on topic 4… the only exception is p4 - p1 (, which still has p &lt; 0.07). The boxplots and the ridged density plots are above.</p>
+<p><strong><em>Elective affinities – ideas choosing people</em></strong>: Social network modeling can give us insights here. I treat the topic proportions as an incidence matrix and plot a bipartite network of discourses connecting people. The centrality measures should provide us with an idea about the influence of different discourses. Here is how <em>ideas choosing people</em> part of <strong><em>elective affinities</em></strong> looks like.</p>
+<p>Below is the network. Circle nodes are the participants of the survey; node color corresponds to the estimated latent profile. Red squares are the topics. The edge weights connecting the topics and participants are the topic proportions.</p>
+<p><img src="blog_2019_06_09_files/figure-html/unnamed-chunk-13-1.png" width="1440" /></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Eigen vector centrality</th>
+<th>Closeness</th>
+<th>Betweenness</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Topic 1</td>
+<td>0.70</td>
+<td>4.28</td>
+<td>0.834</td>
+</tr>
+<tr class="even">
+<td>Topic 2</td>
+<td>0.73</td>
+<td>4.15</td>
+<td>0.973</td>
+</tr>
+<tr class="odd">
+<td>Topic 3</td>
+<td>0.64</td>
+<td>4.54</td>
+<td>0.509</td>
+</tr>
+<tr class="even">
+<td>Topic 4</td>
+<td>1.00</td>
+<td>3.21</td>
+<td>0.777</td>
+</tr>
+</tbody>
+</table>
+<p>The most influential discourse is topic 1 (with eigenvector centrality value = 1) – the official founding ideology of Turkey (Kemalism) with its interpretation that (over-)praises Mustafa Kemal Atatürk. This is no surprise given that I have a biased convenience sample. Majority of the participants in the sample are urban, young, university students who self-reported to be secular and non-AKP supporters. It’s expected that they frame most of their Turkishness definition with the vocabulary of the Kemalist discourse. The second influential discourse is the one that makes references to Turkishness as an ethnic category (topic 2). Again, no surprises; ethnicity has always been a salient issue in Turkey, which has been instrumentalized in various ways to exclude non-Muslims and Kurds. This discourse has always had its ultra-nationalist/racist version and Kemalist version. The current governing party AKP has been transforming a mixture of the two to create its own hybrid. The third influencial discourse is topic 1: a more civic and cosmopolitan interpretation of Kemalism that emerged in the late 1980s; that is followed by the discourse that interbreeds ethnicity and religion (topic 3).</p>
+<p>Closeness and betweenness centrality measures can also provide fruitful information about the influence of discourses; however, in this case, I think it will be susceptible to over-stretched interpretations.</p>
+<p><strong>What is the point</strong>: People internalize multiple discourses and possess the ideas that come with these discourses. The ideas might be in conflict and/or competition; ideas might be contradictory. People might be selective in the degree they internalize these different ideas; ideas permeate their hosts, nevertheless. Nationalist discourses might look like a messy patchwork of stories or like bad semantic salad. However, if you zoom out, you see that it functions for at least for two things.</p>
+<ul>
+<li>It provides some sort of organization (I’m not saying good organization) for large social &amp; political units like nation-states.</li>
+<li>It functions for itself.</li>
+</ul>
+<p>If nationalism is really a thing with emergent properties, exploiting <em>distributed knowledge</em> and all that stuff, then perhaps there is reason to think that it also functions for itself. It creates multiple versions of itself – variation is always necessary for survival, then uses peoples/profiles as “vehichles” (Dawkins, 1976) for reproduction, spread, and recombination… We should not be surprised to observe multiple nationalistic discourses, incoherent, and conflicting narratives in any given nation/population… or across populations.</p>
+<p>Of course, these results I present here have quite a few limitations. I already mentioned the sample bias. STM requires big text data – much larger corpus than the one I have here. Nevertheless, I think the whole modeling process is pretty useful if you want to entertain the idea of <strong><em>elective affinities</em></strong>. I think one can do a lot with bigger and more representative data for a population.</p>
+<div id="references" class="section level2">
+<h2>References</h2>
+<p>Ardag, M. M., Cohrs, J. C., &amp; Selck, T. J. (2019). A Multi-Method Approach to National Identity: From Individual Level Attachment to National Attachment. SSRN. <a href="doi:http://dx.doi.org/10.2139/ssrn.3321204" class="uri">doi:http://dx.doi.org/10.2139/ssrn.3321204</a> </br>Bora, T. (2003). Nationalist Discourses in Turkey. The South Atlantic Quarterly, 102(2-3), 433-451. </br>Bora, T. (2011). Nationalist Discourses in Turkey. In A. Kadioglu &amp; E. F. Keyman (Eds.), Symbiotic antagonisms : competing nationalisms in Turkey (pp. 57-81). Salt Lake City: University of Utah Press. </br>Cichocka, A. (2016). Understanding defensive and secure in-group positivity: The role of collective narcissism. European Review of Social Psychology, 27(1), 283-317. <a href="doi:10.1080/10463283.2016.1252530" class="uri">doi:10.1080/10463283.2016.1252530</a> </br>Dawkins, R. (1976). The selfish gene. Oxford: Oxford University Press. </br>Golec de Zavala, A. (2017). Collective narcissism: antecedents and consequences of exaggeration of the in-group image. In A. Hermann, A. Brunell, &amp; J. Foster (Eds.), The Handbook of Trait Narcissism: Key Advances, Research Methods, and Controversies: Springer. </br>Hammack, P. L., &amp; Pilecki, A. (2012). Narrative as a Root Metaphor for Political Psychology. Political Psychology, 33(1), 75-103. </br>Hammack, P. L., &amp; Pilecki, A. (2014). Methodological Approaches in Political Psychology: Discourse and Narrative. In P. Nesbitt-Larking, C. Kinnvall, &amp; T. Capelos (Eds.), The Palgrave Handbook of Global Political Psychology (pp. 72-89). Hampshire: Palgrave Macmillan UK. </br>Jost, J. T. (2017). The marketplace of ideology: “Elective affinities” in political psychology and their implications for consumer behavior. Journal of Consumer Psychology, 27(4), 502-520. <a href="doi:https://doi.org/10.1016/j.jcps.2017.07.003" class="uri">doi:https://doi.org/10.1016/j.jcps.2017.07.003</a> </br>Jost, J. T., Federico, C. M., &amp; Napier, J. L. (2009). Political ideology: Its structure, functions, and elective affinities. Annual review of psychology, 60, 307-337. </br>Kaufmann, E. (2017). Complexity and nationalism. Nations and Nationalism, 23(1), 6-25. <a href="doi:10.1111/nana.12270" class="uri">doi:10.1111/nana.12270</a> </br>Ozkirimli, U. (2017). Theories of Nationalism: A Critical Introduction: Macmillan Education UK. </br>Özkırımlı, U. (2011). The Changing Nature of Nationalism in Turkey Actors, Discourses, and the Struggle for Hegemony. In A. Kadioglu &amp; E. F. Keyman (Eds.), Symbiotic antagonisms : competing nationalisms in Turkey (pp. 82-100). Salt Lake City: University of Utah Press.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><font size="1">Attachment style is there because it is something deeply embedded within the individuals with genetic &amp; environmental influences. These discourses have to impact something within the individual to be appealing to them. I think discourses hijack the psychological market place via acting upon attachment style – my study provides some empirical evidence for that.</font><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

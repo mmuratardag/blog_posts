@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>MMA, Ph.D., BlogPost: 16/04/2019</title>
+
+<script src="site_libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  { color: #cccccc; background-color: #303030; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffcfaf; } /* Alert */
+code span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #dca3a3; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #f0dfaf; } /* ControlFlow */
+code span.ch { color: #dca3a3; } /* Char */
+code span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+code span.co { color: #7f9f7f; } /* Comment */
+code span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+code span.do { color: #7f9f7f; } /* Documentation */
+code span.dt { color: #dfdfbf; } /* DataType */
+code span.dv { color: #dcdccc; } /* DecVal */
+code span.er { color: #c3bf9f; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #c0bed1; } /* Float */
+code span.fu { color: #efef8f; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+code span.kw { color: #f0dfaf; } /* Keyword */
+code span.op { color: #f0efd0; } /* Operator */
+code span.ot { color: #efef8f; } /* Other */
+code span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+code span.sc { color: #dca3a3; } /* SpecialChar */
+code span.ss { color: #cc9393; } /* SpecialString */
+code span.st { color: #cc9393; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #cc9393; } /* VerbatimString */
+code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 52px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h2 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h3 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h4 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h5 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h6 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">M. Murat Ardag, Ph.D.</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://mmuratardag.github.io">Go back to the data science website</a>
+</li>
+<li>
+  <a href="https://mmuratardag.github.io/academic_website">Go back to the academic website</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br /></p>
+<div id="semtree-vs.-network-tree1" class="section level1">
+<h1>semtree vs. network tree<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h1>
+<p>In the last five years or so, there have been several exciting new developments within the broader psychometrics research applications. As a practitioner, I find the combination of tree-based methods with structural equation modeling, and with <a href="http://psychosystems.org/" target="_blank">attitude networks</a> very appealing. These are great approaches both for data-mining and inference. See <a href="http://brandmaier.de/semtree/user-guide/using-lavaan-with-semtree/" target="_blank">this</a> and <a href="https://paytonjjones.wordpress.com/2019/03/04/networktree/" target="_blank">this</a>.</p>
+<p>One related question I got during a workshop on attitude networks got me really curious. But let me take a step back and provide a brief background first: there is also very interesting and rapidly growing literature and debate on the equivalence, meaning, applications and implications of SEM &amp; network modeling with attitudinal data (see Bringmann &amp; Eronen, 2018; Dalege, Borsboom, Harreveld, &amp; Maas, 2017; Epskamp, Rhemtulla, &amp; Borsboom, 2017; Fried, 2017; Guyon, Falissard, &amp; Kop, 2017; Kruis &amp; Maris, 2016; Marsman et al., 2018).</p>
+<p>With oversimplification, it can be said that “on empirical grounds, attitude networks and latent trait models correspond to one another”. Given certain assumptions, “latent trait models and network models based on attitudinal data are mathematically equivalent” and complementary. “Each latent trait model has an equivalent network model that fits the data equally well and vice versa”. “The differences between latent trait models and attitudinal network models lie in the drawn inferences”, and theoretical basis and “one does not necessarily negate the other”.</p>
+<p>Guided by the question I got, and driven by my curiosity I wanted to apply a model-based recursive partitioning to the same measurement model after seeing it as a CFA and attitude network. The measurement model at hand is straight-forward and theory-driven. <em>Nationalism</em> (nat) is influencing responses to the three following survey-items, and <em>blind patriotism</em> (bpt) is influencing two survey-items (see Otten &amp; Cohrs, 2010).</p>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="7%" />
+<col width="78%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Latent Construct</th>
+<th>variable</th>
+<th>item wording</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nationalism:</td>
+<td>Nci</td>
+<td>I would rather be a citizen of [COUNTRY] than of any other country in the world</td>
+</tr>
+<tr class="even">
+<td>Nationalism:</td>
+<td>Nwb</td>
+<td>The world would be a better place if people from other countries were more like the [COUNTRY NATIONALITY]</td>
+</tr>
+<tr class="odd">
+<td>Nationalism:</td>
+<td>Ncb</td>
+<td>Generally speaking, [COUNTRY] is a better country than most other countries</td>
+</tr>
+<tr class="even">
+<td>Blind Patriotism:</td>
+<td>Pbs</td>
+<td>People should support their country even if the country is in the wrong</td>
+</tr>
+<tr class="odd">
+<td>Blind Patriotism:</td>
+<td>Pbi</td>
+<td>[COUNTRY] should follow its own interests, even if this leads to conflicts with other nations</td>
+</tr>
+</tbody>
+</table>
+<p>The data comes from <a href="https://www.gesis.org/issp/modules/issp-modules-by-topic/national-identity/2013/" target="_blank">ISSP’s National Identity Module III</a>. The following is the output after some basic data-prep. Given the brief background above, we got no surprise. The measurement model is pretty good (also significantly better than a uni-factor <em>ethnocentrism</em> model), and the latent variable structure &amp; the attitude network communities (estimated with walktrap algorithm) correspond to one another.</p>
+<p><img src="blog_2019_04_16_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre><code>##                 chisq                    df                pvalue 
+##               444.868                 4.000                 0.000 
+##  chisq.scaling.factor            cfi.robust            tli.robust 
+##                 1.164                 0.986                 0.966 
+##          rmsea.robust   rmsea.pvalue.robust rmsea.ci.lower.robust 
+##                 0.049                    NA                 0.045 
+## rmsea.ci.upper.robust          rmsea.pvalue                  srmr 
+##                 0.054                 0.577                 0.016</code></pre>
+<p>What is surprising is that when I split these models with the same variables (gender, age group transformed into quartiles, left-right orientation operationalized as vote-recall and reporting to feel at the top or the bottom of the society – again dichotomized by the median), semtree does not find any sub-groups but networktree does. See the following.</p>
+<p>The first is the output of semtree that finds no heterogeneity in the data; the hyperparameters arguments are</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tr_sem.control <span class="ot">&lt;-</span> <span class="fu">semtree.control</span>(<span class="at">alpha=</span><span class="fl">0.05</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">bonferroni=</span>T,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">min.N=</span><span class="dv">20</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">alpha.invariance=</span><span class="fl">0.05</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">method=</span><span class="st">&quot;naive&quot;</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">exclude.heywood=</span>T)</span></code></pre></div>
+<p><img src="blog_2019_04_16_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Unlike the semtree, networktree estimates quite the heterogeneity.</p>
+<p><img src="blog_2019_04_16_files/figure-html/unnamed-chunk-8-1.png" width="1440" /></p>
+<p>The most important variable seems to be the left-right orientation. Those who have reported voting for the communist parties have a significantly different national identity network compared to the rest. On the right side of the plot, the center (liberal) and the rest are significantly different from one another. For those who voted for the center parties, feeling at the top or the bottom of the society makes a difference – here, there is also a significant difference between males and females who feel at the top of the society. For those who voted for the center-left, conservative, and far-right, there is also a gender difference. In this cluster, for men, the order of the split is feeling at the top or the bottom of the society and left-right differences again. For women, the age group is more influential than feeling at the top or the bottom of the society. If I were to interpret these findings, I probably would have turned to evolutionary differences in gender and domination tendencies and how these probably are associated with voting tendencies and different perceptions of national identity. However, I’m not going to do that. Although the findings of the attitude network tree are not that surprising and new per se, the estimation differences between sem-tree &amp; network-tree are obvious. Networktree estimation seems to be less prone/sensitive to over-parameterization issues. Plus, there is definitely a lot of room to go in the latent variable modeling vs. attitude network modeling discussion.</p>
+<div id="references" class="section level2">
+<h2>References</h2>
+<p>Bringmann, L. F., &amp; Eronen, M. I. (2018). Don’t blame the model: Reconsidering the network approach to psychopathology. Psychological Review, 125(4), 606-615. <a href="doi:10.1037/rev0000108" class="uri">doi:10.1037/rev0000108</a></p>
+<p>Dalege, J., Borsboom, D., Harreveld, F. v., &amp; Maas, H. L. J. v. d. (2017). Network Analysis on Attitudes:A Brief Tutorial. Social Psychological and Personality Science, 8(5), 528-537. <a href="doi:10.1177/1948550617709827" class="uri">doi:10.1177/1948550617709827</a></p>
+<p>Epskamp, S., Rhemtulla, M., &amp; Borsboom, D. (2017). Generalized Network Psychometrics: Combining Network and Latent Variable Models. Psychometrika, 1-24. <a href="doi:10.1007/s11336-017-9557-x" class="uri">doi:10.1007/s11336-017-9557-x</a></p>
+<p>Fried, E. I. (2017). What are psychological constructs? On the nature and statistical modelling of emotions, intelligence, personality traits and mental disorders. Health Psychology Review, 11(2), 130-134. <a href="doi:10.1080/17437199.2017.1306718" class="uri">doi:10.1080/17437199.2017.1306718</a></p>
+<p>Guyon, H., Falissard, B., &amp; Kop, J.-L. (2017). Modeling Psychological Attributes in Psychology – An Epistemological Discussion: Network Analysis vs. Latent Variables. Frontiers in Psychology, 8, 798. <a href="doi:10.3389/fpsyg.2017.00798" class="uri">doi:10.3389/fpsyg.2017.00798</a></p>
+<p>Kruis, J., &amp; Maris, G. (2016). Three representations of the Ising model. Scientific Reports, 6, 34175. <a href="doi:10.1038/srep34175" class="uri">doi:10.1038/srep34175</a></p>
+<p>Marsman, M., Borsboom, D., Kruis, J., Epskamp, S., van Bork, R., Waldorp, L. J., . . . Maris, G. (2018). An Introduction to Network Psychometrics: Relating Ising Network Models to Item Response Theory Models. Multivariate Behavioral Research, 53(1), 15-35. <a href="doi:10.1080/00273171.2017.1379379" class="uri">doi:10.1080/00273171.2017.1379379</a></p>
+<p>Otten, S., &amp; Cohrs, J. C. (2010). Nationalism and patriotism. In JM Levine, MA Hogg, Encyclopedia of Group Processes and Intergroup Relations: Sage.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><font size="1">Updated about a year later</font><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

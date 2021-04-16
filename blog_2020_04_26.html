@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>MMA, Ph.D., BlogPost: 26/04/2019</title>
+
+<script src="site_libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 52px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h2 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h3 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h4 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h5 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h6 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">M. Murat Ardag, Ph.D.</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://mmuratardag.github.io">Go back to the data science website</a>
+</li>
+<li>
+  <a href="https://mmuratardag.github.io/academic_website">Go back to the academic website</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br /></p>
+<div id="an-informal-benchmarking-within-psychometrics-attitude-network-approach-vs.-the-general-sem-framework-using-german-national-identity-as-an-example" class="section level1">
+<h1>An informal benchmarking within psychometrics: attitude network approach vs. the general SEM framework using German national identity as an example</h1>
+<p>Many scholars misleadingly equate psychometrics to IRT today. However, IRT cannot be the solo rock star of psychometrics. Quoting <a href="http://www.iops.nl/wp-content/uploads/2015/02/ThePhilosophyOfPsychometrics_2015_DennyBorsboom.pdf" target="_blank">this guy</a> psychometrics has got something to do with formalizing the connection between data and theory; realizing that has multiple paths. So let’s traverse some of those paths, shall we?..</p>
+<p>The workhorse of psychometrics has been the general SEM framework, particularly the latent variable models built with CFAs, and more recently with the IRTs. There is a cool new kid on the block now, though… actually has been there for a while now. This kid may be more similar to the existing workhorse in many ways. Yes! I’m talking about latent variable models and network models being equivalent again. <a href="https://doi.org/10.1080/00273171.2019.1672515" target="_blank">Here</a> is a more recent paper. Basically, we are one more step ahead when it comes to understanding and distinguishing the equivalence in unidimensional constructs; however, we need more time and research for scrutinizing the equivalence in multi-dimensional constructs. But I’m simply impatient.</p>
+<p>In this blog post, I want to do 3 things.</p>
+<ul>
+<li>See the correspondence between IRT’s item information curves and node centrality in attitude networks. Node centrality in attitude networks has been one of the weakest links in this paradigm. See <a href="https://psycnet.apa.org/doi/10.1037/abn0000446" target="_blank">this</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+<li>Compare two R packages on the item-reduction task within the psychological networks approach
+<ul>
+<li>See if these item-reduction techniques from the packages can somewhat improve possible node centrality interpretations</li>
+</ul></li>
+<li>Try to learn a few things about German national identity with a convenient sample by seeing
+<ul>
+<li>how it can be measured best with attitude networks</li>
+<li>what the correlates of national identification might be in Germany</li>
+<li>the role of subjectivity – that is, investigating the psychological profiles of different national identifiers.</li>
+</ul></li>
+</ul>
+<p>I am using two instruments measuring very closely related psychological constructs: <a href="https://doi.org/10.1111/pops.12569" target="_blank"><em>collective narcissism</em></a><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> and <a href="https://econtent.hogrefe.com/doi/10.1027/1864-9335/a000243" target="_blank"><em>national identification</em></a>. Let’s start with the SEM framework. Item wordings and latent constructs are displayed in the table below.</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-4erg{font-weight:bold;font-style:italic;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<tr>
+<th class="tg-4erg">
+2nd Order latent construct
+</th>
+<th class="tg-4erg">
+1st Order latent construct
+</th>
+<th class="tg-4erg">
+variable name
+</th>
+<th class="tg-4erg">
+Item Abbreviation<br>
+</th>
+<th class="tg-4erg">
+Item wording
+</th>
+</tr>
+<tr>
+<td class="tg-9wq8" rowspan="9">
+Self-Investment (SIn)
+</td>
+<td class="tg-9wq8" rowspan="3">
+Centrality (Ce)
+</td>
+<td class="tg-0pky">
+nice01
+</td>
+<td class="tg-0pky">
+Ce1
+</td>
+<td class="tg-0pky">
+I often think about the fact that I am German.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+nice02
+</td>
+<td class="tg-0pky">
+Ce2
+</td>
+<td class="tg-0pky">
+The fact that I am German is an important part of my identity.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+nice03
+</td>
+<td class="tg-0pky">
+Ce3
+</td>
+<td class="tg-0pky">
+Being German is an important part of how I see myself.
+</td>
+</tr>
+<tr>
+<td class="tg-9wq8" rowspan="3">
+Solidarity (So)
+</td>
+<td class="tg-0pky">
+niso01
+</td>
+<td class="tg-0pky">
+So1
+</td>
+<td class="tg-0pky">
+I feel a bond with Germans.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+niso02
+</td>
+<td class="tg-0pky">
+So2
+</td>
+<td class="tg-0pky">
+I feel solidarity with Germans.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+niso03
+</td>
+<td class="tg-0pky">
+So3
+</td>
+<td class="tg-0pky">
+I feel committed to Germans.
+</td>
+</tr>
+<tr>
+<td class="tg-9wq8" rowspan="3">
+Satisfaction (Sa)
+</td>
+<td class="tg-0pky">
+nisa01
+</td>
+<td class="tg-0pky">
+Sa1
+</td>
+<td class="tg-0pky">
+I am glad to be German.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+nisa02
+</td>
+<td class="tg-0pky">
+Sa2
+</td>
+<td class="tg-0pky">
+It is pleasant to be German.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+nisa03
+</td>
+<td class="tg-0pky">
+Sa3
+</td>
+<td class="tg-0pky">
+Being German gives me a good feeling.
+</td>
+</tr>
+<tr>
+<td class="tg-9wq8" rowspan="6">
+Self-Definition (SDe)
+</td>
+<td class="tg-9wq8" rowspan="3">
+Self-Stereotyping (Ss)
+</td>
+<td class="tg-0pky">
+niss01
+</td>
+<td class="tg-0pky">
+Ss1
+</td>
+<td class="tg-0pky">
+I have a lot in common with the average German person.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+niss02
+</td>
+<td class="tg-0pky">
+Ss2
+</td>
+<td class="tg-0pky">
+I am similar to the average German person.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+niss03
+</td>
+<td class="tg-0pky">
+Ss3
+</td>
+<td class="tg-0pky">
+I am a typical German.
+</td>
+</tr>
+<tr>
+<td class="tg-9wq8" rowspan="3">
+In-Group Homogeneity (IH)
+</td>
+<td class="tg-0pky">
+niho01
+</td>
+<td class="tg-0pky">
+Ih1
+</td>
+<td class="tg-0pky">
+German people have a lot in common with each other.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+niho02
+</td>
+<td class="tg-0pky">
+Ih2
+</td>
+<td class="tg-0pky">
+German people are very similar to each other.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+niho03
+</td>
+<td class="tg-0pky">
+Ih3
+</td>
+<td class="tg-0pky">
+German share a lot of the same characteristics.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky" rowspan="5">
+</td>
+<td class="tg-9wq8" rowspan="5">
+Collective Narcissism (CN)
+</td>
+<td class="tg-0pky">
+cn2
+</td>
+<td class="tg-0pky">
+Cn2
+</td>
+<td class="tg-0pky">
+Germany deserves special treatment.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+cn3
+</td>
+<td class="tg-0pky">
+Cn3
+</td>
+<td class="tg-0pky">
+I will never be satisfied until Germany gets all it deserves.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+cn5
+</td>
+<td class="tg-0pky">
+Cn5
+</td>
+<td class="tg-0pky">
+It really makes me angry when others criticize Germany.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+cn6
+</td>
+<td class="tg-0pky">
+Cn6
+</td>
+<td class="tg-0pky">
+If other countries listened to Germany more, the world would be a much better place.
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+cn8
+</td>
+<td class="tg-0pky">
+Cn8
+</td>
+<td class="tg-0pky">
+Not many people seem to fully understand the importance of Germany.
+</td>
+</tr>
+</table>
+<div id="the-sem-framework-cfa-irt" class="section level2">
+<h2>The SEM framework: CFA &amp; IRT</h2>
+<p>The overall measurement model looks like the following.</p>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-3-1.png" width="1440" /></p>
+<p>Here is the goodness of fit stats and reliabilities. </br></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Robust <span class="math inline">\(\chi^2\)</span> (df):</td>
+<td align="right">907.029 (162)***</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td>Scaling correction factor for the Yuan-Bentler correction</td>
+<td align="right">1.165</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td>Robust CFI:</td>
+<td align="right">0.967</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td>Robust TLI:</td>
+<td align="right">0.962</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td>Robust RMSEA (P-value) 90 % CI:</td>
+<td align="right">0.049 (0.994) 0.046-0.053</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td>SRMR:</td>
+<td align="right">0.037</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega_{total}\)</span></td>
+<td align="right">0.96</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_{CN}\)</span></td>
+<td align="right">0.84</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega_{Ce}\)</span></td>
+<td align="right">0.82</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_{So}\)</span></td>
+<td align="right">0.85</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega_{Sa}\)</span></td>
+<td align="right">0.86</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_{Ss}\)</span></td>
+<td align="right">0.89</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega_{IH}\)</span></td>
+<td align="right">0.86</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_{SIn}\)</span></td>
+<td align="right">0.94</td>
+<td align="right"><span class="math inline">\(\omega_{level1}\)</span>: 0.87</td>
+<td align="right">partial <span class="math inline">\(\omega_{level1}\)</span>:0.93</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega_{SDef}\)</span></td>
+<td align="right">0.73</td>
+<td align="right"><span class="math inline">\(\omega_{level1}\)</span>:0.65</td>
+<td align="right">partial <span class="math inline">\(\omega_{level1}\)</span>:0.88</td>
+</tr>
+</tbody>
+</table>
+<p></br> All GoF stats look pretty good. Let’s switch from the reliability stuff to a different paradigm. Item information curves (IIC) and cumulated information with measurement error (TCC + error) are displayed in the plots below for each construct<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-4-1.png" width="1440" /></p>
+<p><em>Collective narcissism</em> and <em>self-stereotyping</em> have more accumulated information compared to the other constructs. Though, with <em>collective narcissism</em>, the low error range on the latent continuum is a bit narrower compared to the other constructs. I especially like the error line of <em>solidarity</em>, <em>satisfaction</em>, and <em>self-stereotyping</em> scales. All these observations are not super relevant to what I intend to do below. Let’s just keep an eye on the IICs. Cn3, nice03, niso01, nisa02, niss02, and niho03 have the peaking info curves.</p>
+</div>
+<div id="switching-to-the-attitude-networks-paradigm" class="section level2">
+<h2>Switching to the attitude networks paradigm</h2>
+<p>Quick recap: the network represents the true relationship across the items; edges are the penalized associations, red being negative, blue being positive. The color of the nodes can/might/should correspond to the underlying latent constructs. Louvain community detection algorithm lumps centrality and solidarity items together. The rest is the same as the measurement model. What I like about the plot on the right (the network plot with MDS configuration layout (see <a href="https://doi.org/10.3389/fpsyg.2018.01742" target="_blank">here</a>) is the scale items coming properly together.</p>
+<div id="attitude-network-with-all-items" class="section level5">
+<h5>Attitude network with all items</h5>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-5-1.png" width="1440" /></p>
+<p>I am not even going to interpret the centrality plot below at this early stage, but we are already seeing the hint that the two-step expected influence makes a difference in an attitude network of multiple latent constructs’ items.</p>
+</div>
+<div id="centrality-plot-of-the-network-with-all-items" class="section level5">
+<h5>Centrality plot of the network with all items</h5>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-7-1.png" width="1440" /></p>
+<p>One can use two R libraries (namely <code>networktools</code> and <code>EGAnet</code>) for item reduction in an attitude network. We may need item reduction in an attitude network simply because inflated and misleading associations might remain in the network even after regularization. Both packages offer unique empirical ways to eliminate inflated associations. While networktools suggests and removes redundant items with two convenient functions, EGAnet enables manual intervention. Below are the problematic item-pairs suggested by networktools.</p>
+</div>
+<div id="item-reduction-with-networktools-automatic-empirical-suggestion" class="section level3">
+<h3>Item reduction with networktools: automatic empirical suggestion</h3>
+<table>
+<thead>
+<tr class="header">
+<th>suggested reductions</th>
+<th align="center"></th>
+<th align="right">proportion values of the bad pairs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>cn8 &amp; cn2</td>
+<td align="center"></td>
+<td align="right">0.1111111</td>
+</tr>
+<tr class="even">
+<td>niso03 &amp; nice03</td>
+<td align="center"></td>
+<td align="right">0.2222222</td>
+</tr>
+<tr class="odd">
+<td>nisa02 &amp; nisa01</td>
+<td align="center"></td>
+<td align="right">0.2222222</td>
+</tr>
+<tr class="even">
+<td>niss03 &amp; niss01</td>
+<td align="center"></td>
+<td align="right">0.2777778</td>
+</tr>
+<tr class="odd">
+<td>niss03 &amp; niss02</td>
+<td align="center"></td>
+<td align="right">0.2777778</td>
+</tr>
+<tr class="even">
+<td>niso02 &amp; nice02</td>
+<td align="center"></td>
+<td align="right">0.3333333</td>
+</tr>
+<tr class="odd">
+<td>nisa03 &amp; niso03</td>
+<td align="center"></td>
+<td align="right">0.3333333</td>
+</tr>
+<tr class="even">
+<td>niso01 &amp; nice02</td>
+<td align="center"></td>
+<td align="right">0.3888889</td>
+</tr>
+<tr class="odd">
+<td>niso03 &amp; nice02</td>
+<td align="center"></td>
+<td align="right">0.3888889</td>
+</tr>
+<tr class="even">
+<td>nisa03 &amp; nice02</td>
+<td align="center"></td>
+<td align="right">0.3888889</td>
+</tr>
+<tr class="odd">
+<td>niso02 &amp; niso01</td>
+<td align="center"></td>
+<td align="right">0.3888889</td>
+</tr>
+<tr class="even">
+<td>nisa03 &amp; niso01</td>
+<td align="center"></td>
+<td align="right">0.3888889</td>
+</tr>
+<tr class="odd">
+<td>niso02 &amp; nice03</td>
+<td align="center"></td>
+<td align="right">0.4444444</td>
+</tr>
+<tr class="even">
+<td>nisa03 &amp; niso02</td>
+<td align="center"></td>
+<td align="right">0.4444444</td>
+</tr>
+</tbody>
+</table>
+<p>The good thing about the networktools’ convenient functions is the automatic suggestion and removal. Though, in my experience, when you have attitude networks composed of multiple latent constructs’ items, networktools’ convenient functions become a bit inconvenient as we see above. In this particular example, the automatic removal does not also work simply because quite a few items belong to multiple “bad-pairs”. The small table below shows all the problematic items ordered by scale. I am going to go ahead and brutally kill all these bad boys.</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<tr>
+<th class="tg-c3ow" colspan="5">
+Items suggested for reduction
+</th>
+</tr>
+<tr>
+<td class="tg-c3ow">
+nice02
+</td>
+<td class="tg-c3ow">
+niso01
+</td>
+<td class="tg-c3ow">
+nisa01
+</td>
+<td class="tg-c3ow">
+niss01
+</td>
+<td class="tg-c3ow">
+cn2
+</td>
+</tr>
+<tr>
+<td class="tg-c3ow">
+nice03
+</td>
+<td class="tg-c3ow">
+niso02
+</td>
+<td class="tg-c3ow">
+nisa02
+</td>
+<td class="tg-c3ow">
+niss02
+</td>
+<td class="tg-c3ow">
+cn8
+</td>
+</tr>
+<tr>
+<td class="tg-c3ow">
+</td>
+<td class="tg-c3ow">
+niso03
+</td>
+<td class="tg-c3ow">
+nisa03
+</td>
+<td class="tg-c3ow">
+niss03
+</td>
+<td class="tg-c3ow">
+</td>
+</tr>
+</table>
+<p></br> Below is the resulting new attitude network with reduced items. <em>In-group homogeneity</em> is still its own thing; one <em>centrality</em> item joined <em>collective narcissism</em>.</p>
+<div id="attitude-network-with-reduced-items-networktools" class="section level5">
+<h5>Attitude network with reduced items: <code>networktools</code></h5>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-10-1.png" width="1440" /></p>
+<p>Note that the item reduction strategy by networktools works on two adjacent vertices/nodes, and apparently, it does not automatically account for cliques.</p>
+<p>And here is the centrality plot of the network with reduced items. It is still better to rely on the two-step expected influence. We got niho03, cn3, and niho02 at the top in contrast to nisa03, nice02, and niss02 (all absent/dead in this reduced network). cn3 and niho03 are the items with the highest information in their respective scales. Still, we lost other potential informative items like nice03, niss02, which I brutally killed after the bad-pair suggestions by networktools.</p>
+</div>
+<div id="centrality-plot-of-the-network-after-item-reduction-with-networktools" class="section level5">
+<h5>centrality plot of the network after item reduction with <code>networktools</code></h5>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-12-1.png" width="1440" /></p>
+</div>
+</div>
+<div id="item-reduction-with-eganet-manual-empirical-suggestion" class="section level3">
+<h3>Item reduction with EGAnet: manual empirical suggestion</h3>
+<p>EGAnet (in contrast to networktools) provides more control and forces you to think while you are manually making your choices. It plays on the cliques in the network by offering you a target node (see the vignette-like tutorial <a href="https://psyarxiv.com/ktejp/" target="_blank">here</a>). The coolest thing is that the whole procedure is designed for the networks that include multiple latent constructs. In this example, I only removed the adjacent two nodes within cliques and ended up with the following network. The plot displays the reduced attitude network after the Louvain community detection algorithm.</p>
+<div id="attitude-network-with-reduced-items-eganet" class="section level5">
+<h5>Attitude network with reduced items: <code>EGAnet</code></h5>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-15-1.png" width="1440" /></p>
+<p>We can also get the network loadings. We are looking at <em>centrality</em>, <em>solidarity</em>, and <em>collective narcissism</em> remaining “as is” in the network. <em>Solidarity</em> is within a community that includes combined “in-group homogeneity” and satisfaction scales.</p>
+</div>
+<div id="network-loadings" class="section level5">
+<h5>Network loadings</h5>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"></th>
+<th align="right">1</th>
+<th align="right">2</th>
+<th align="right">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cen01</td>
+<td align="center"></td>
+<td align="right">0.206</td>
+<td align="right">0.070</td>
+<td align="right">0.059</td>
+</tr>
+<tr class="even">
+<td>Cen02</td>
+<td align="center"></td>
+<td align="right">0.270</td>
+<td align="right">0.241</td>
+<td align="right">0.031</td>
+</tr>
+<tr class="odd">
+<td>Cen03</td>
+<td align="center"></td>
+<td align="right">0.346</td>
+<td align="right">0.138</td>
+<td align="right">0.091</td>
+</tr>
+<tr class="even">
+<td>Sol01</td>
+<td align="center"></td>
+<td align="right">0.117</td>
+<td align="right">0.364</td>
+<td align="right">0.010</td>
+</tr>
+<tr class="odd">
+<td>Sol02</td>
+<td align="center"></td>
+<td align="right">0.064</td>
+<td align="right">0.324</td>
+<td align="right">0.036</td>
+</tr>
+<tr class="even">
+<td>Sol03</td>
+<td align="center"></td>
+<td align="right">0.164</td>
+<td align="right">0.252</td>
+<td align="right">0.092</td>
+</tr>
+<tr class="odd">
+<td>Three items from <em>satisfaction</em> combined</td>
+<td align="center"></td>
+<td align="right">0.124</td>
+<td align="right">0.221</td>
+<td align="right">0.083</td>
+</tr>
+<tr class="even">
+<td>Three items from <em>self-stereotyping</em> combined</td>
+<td align="center"></td>
+<td align="right">0.106</td>
+<td align="right">0.238</td>
+<td align="right">0.026</td>
+</tr>
+<tr class="odd">
+<td>Three items from <em>in-group homogeneity</em> combined</td>
+<td align="center"></td>
+<td align="right">0.040</td>
+<td align="right">0.124</td>
+<td align="right">0.095</td>
+</tr>
+<tr class="even">
+<td>CN2</td>
+<td align="center"></td>
+<td align="right">0.040</td>
+<td align="right">0.022</td>
+<td align="right">0.368</td>
+</tr>
+<tr class="odd">
+<td>CN3</td>
+<td align="center"></td>
+<td align="right">0.109</td>
+<td align="right">0.112</td>
+<td align="right">0.411</td>
+</tr>
+<tr class="even">
+<td>CN5</td>
+<td align="center"></td>
+<td align="right">0.066</td>
+<td align="right">0.055</td>
+<td align="right">0.287</td>
+</tr>
+<tr class="odd">
+<td>CN6</td>
+<td align="center"></td>
+<td align="right">0.000</td>
+<td align="right">0.070</td>
+<td align="right">0.216</td>
+</tr>
+<tr class="even">
+<td>CN8</td>
+<td align="center"></td>
+<td align="right">0.013</td>
+<td align="right">0.055</td>
+<td align="right">0.292</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the chances of this network structure replicating in other samples.</p>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-16-1.png" width="1440" /></p>
+<p>Finally, let’s look at the centrality plot once again. After EGAnet’s item-reduction process, we got CN3, sol01, cen02 at the top. Well, I guess this means EGAnet’s procedure does not perform any better or worse than networktools’ procedure when it comes to making centrality plots more reliably interpretable.</p>
+</div>
+<div id="centrality-plot-of-the-network-after-item-reduction-with-eganet" class="section level5">
+<h5>centrality plot of the network after item reduction with <code>EGAnet</code></h5>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-19-1.png" width="1440" /></p>
+<p>Overall, judging from this little analysis looks like there may not be much correspondence between IRT’s information and attitude networks’ node centrality. Well, I guess the paradigms are quite different, to begin with. Is there a theoretical and/or empirical reason to expect that the item that can provide more information about a latent trait can also be more central in an attitude network? In my crazy world, there is a theoretical reason to expect that, but the empirical stuff beats me. I just keep an eye on the evolving literature.</p>
+<p>Before moving on the third/final aim of this blog post (I think I already made this clear from the tone anyway but still…), I think <code>EGAnet</code>’s item reduction procedure is much better compared to <code>networktools</code>’ functions. One downside of <code>EGAnet</code> is it not liking missing values. I had to remove all the missing values, which reduced my sample size from 2223 to 1567.</p>
+</div>
+</div>
+</div>
+<div id="networktree-to-see-the-influence-of-socio-demographics-political-orientation" class="section level2">
+<h2>Networktree: to see the influence of socio-demographics + political orientation</h2>
+<p>Now that we have a reduced network, we can move on to examining the correlates with model-based recursive partitioning (again <strong><em>see</em></strong> <a href="https://osf.io/ha4cw/" target="_blank">this</a> and <a href="blog_2019_04_16.html">this</a>). Easy-peasy! Looks like political orientation is an obvious moderator for national identification in this sample. On the right side of the spectrum, we see the influence of immigrant background and gender. On the left, the age-group and immigrant background play a role. The socio-demographics + the political orientation is never surprising/interesting. What is always more interesting is the psychological profiles.</p>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-21-1.png" width="1440" /></p>
+</div>
+<div id="psychological-profiles-with-attitude-networks" class="section level2">
+<h2>Psychological profiles with attitude networks</h2>
+<p><a href="https://www.sociologicalscience.com/articles-v4-15-353/" target="_blank">Correlational class analysis</a><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> suggests two latent profiles using the reduced attitude network. Profile 2’s global strength<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> is significantly higher than Profile 1’s. The transitivities (read as network densities) are also obviously/visually different. Below are the attitude networks of the two profiles; the third plot shows the significantly different edges between the profiles. Let me put it this way: there are 15 edges with a significant weight difference on a p&lt;.05 level; not all of these 15 are displayed on the plot, and I’m only going to focus on the significantly different edges that have weight differences &gt;.1 (also see the table below).</p>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-22-1.png" width="1440" /></p>
+<table>
+<thead>
+<tr class="header">
+<th>Edges</th>
+<th align="right">the difference between edge-strength</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CN2–Cen01</td>
+<td align="right">0.17</td>
+</tr>
+<tr class="even">
+<td>CN3–Cen03</td>
+<td align="right">0.16</td>
+</tr>
+<tr class="odd">
+<td>CN5–Sol01</td>
+<td align="right">0.12</td>
+</tr>
+<tr class="even">
+<td>CN08–Sol02</td>
+<td align="right">0.16</td>
+</tr>
+<tr class="odd">
+<td>Sscom–SatCom</td>
+<td align="right">0.17</td>
+</tr>
+<tr class="even">
+<td>CN5–SatCom</td>
+<td align="right">-0.1</td>
+</tr>
+<tr class="odd">
+<td>CN6–SatCom</td>
+<td align="right">0.14</td>
+</tr>
+</tbody>
+</table>
+<p></br> 6/7 significantly different edges (with weights &gt;.1) involves <em>collective narcissism</em>, which hints the importance of this construct in national identification. Below are the plots with Eigen model configurations. It’s not super obvious what the X &amp; Y axis represent here, but for Profile 1, Cen03 (<font size="1">Being German is an important part of how I see myself</font>) is high on both axis. All the items except combined <em>in-group homogeneity</em> and <em>self-stereotyping</em> are aligned to the right on the x-axis for Profile 1. Cen01 (<font size="1">I often think about the fact that I am German</font>) and CN8 (<font size="1">Not many people seem to fully understand the importance of Germany</font>) are closely related somewhere in the middle. In contrast, Profile 2’s attitude network is wide-ranging on the x-axis. More <em>collective narcissism</em> items are higher on the y-axis. In Profile 2 network, Cen03 (<font size="1">Being German is an important part of how I see myself</font>) &amp; CN3 (<font size="1">I will never be satisfied until Germany gets all it deserves</font>) are very closely related somewhere towards the high-end of both x &amp; y axes.</p>
+<p><img src="blog_2020_04_26_files/figure-html/unnamed-chunk-23-1.png" width="1440" /></p>
+<p>I think the close relationship between Cen01—CN8 in Profile 1’s network reflects a vulnerable <em>collective narcissism</em>. German national identity is salient for Profile 1, and the frustration of others not fully recognizing the country’s importance accompanies this saliency. National identity is salient for Profile 2 as well. However, for this profile, there is that exaggerated emotional investment closely accompanying the identity <em>centrality</em>, indicated by CN3 (<font size="1">I will never be satisfied until Germany gets all it deserves</font>). My best guess is that Profile 2 is high on both <em>self-investment</em> and <em>self-definition</em>; Profile 1 is high(ish) on <em>self-investment</em> but not so high on <em>self-definition</em>. This guess can be (dis-)/confirmed with actual factor scores, which I’m not going to do in this blog post. And, BTW, those who are interested in the different perceptions of German national identity can also take a look at <a href="https://jspp.psychopen.eu/article/view/557" target="_blank">this</a>.</p>
+<p>That is the end of the three things I wanted to do.</p>
+<p>Takeaways are</p>
+<ul>
+<li>Probably we are not near seeing an alignment between IRT’s IIC’s and node centrality measures in attitude networks.</li>
+<li>I prefer <code>EGAnet</code>’s item-reduction approach over <code>networktools</code>’ approach.</li>
+<li>In this convenience sample, I found two distinct psychological profiles utilizing the attitude network paradigm; socio-demographics are boring as hell.</li>
+</ul>
+</div>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<p>Boutyline, A., &amp; Vaisey, S. (2017). Belief Network Analysis: A Relational Approach to Understanding the Structure of Attitudes. American Journal of Sociology, 122(5), 1371-1447. <a href="doi:10.1086/691274" class="uri">doi:10.1086/691274</a></p>
+<p>Bringmann, L. F., Elmer, T., Epskamp, S., Krause, R. W., Schoch, D., Wichers, M., . . . Snippe, E. (2019). What do centrality measures measure in psychological networks? Journal of Abnormal Psychology, 128(8), 892-903. <a href="doi:10.1037/abn0000446" class="uri">doi:10.1037/abn0000446</a></p>
+<p>Christensen, A. P., Golino, H., &amp; Silvia, P. (2019, March 4). A Psychometric Network Perspective on the Validity and Validation of Personality Trait Questionnaires. <a href="https://doi.org/10.31234/osf.io/ktejp" class="uri">https://doi.org/10.31234/osf.io/ktejp</a></p>
+<p>Ditlmann, R. K., &amp; Kopf-Beck, J. (2019). The Meaning of Being German: An Inductive Approach to National Identity. Journal of Social and Political Psychology, 7(1), 423-447. <a href="doi:10.5964/jspp.v7i1.557" class="uri">doi:10.5964/jspp.v7i1.557</a></p>
+<p>Golec de Zavala, A., Dyduch-Hazar, K., &amp; Lantos, D. (2019). Collective Narcissism: Political Consequences of Investing Self-Worth in the Ingroup’s Image. Political Psychology, 40(S1), 37-74. <a href="doi:10.1111/pops.12569" class="uri">doi:10.1111/pops.12569</a></p>
+<p>Jones, P. J., Mair, P., &amp; McNally, R. J. (2018). Visualizing Psychological Networks: A Tutorial in R. Frontiers in Psychology, 9(1742). <a href="doi:10.3389/fpsyg.2018.01742" class="uri">doi:10.3389/fpsyg.2018.01742</a></p>
+<p>Jones, P. J., Mair, P., Simon, T., &amp; Zeileis, A. (2019). Network Model Trees. <a href="https://doi.org/10.31219/osf.io/ha4cw" class="uri">https://doi.org/10.31219/osf.io/ha4cw</a></p>
+<p>Robinaugh, D. J., Millner, A. J., &amp; McNally, R. J. (2016). Identifying highly influential nodes in the complicated grief network. Journal of abnormal psychology, 125, 747.</p>
+<p>Roth, J., &amp; Mazziotta, A. (2015). Adaptation and validation of a German Multidimensional and Multicomponent Measure of Social Identification. Social Psychology, 46(5), 277–290. <a href="https://doi.org/10.1027/1864-9335/a000243" class="uri">https://doi.org/10.1027/1864-9335/a000243</a></p>
+<p>van Bork, R., Rhemtulla, M., Waldorp, L. J., Kruis, J., Rezvanifar, S., &amp; Borsboom, D. (2019). Latent Variable Models and Networks: Statistical Equivalence and Testability. Multivariate Behavioral Research, 1-24. <a href="doi:10.1080/00273171.2019.1672515" class="uri">doi:10.1080/00273171.2019.1672515</a></p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><font size="1">An ad-hoc solution to the apparent problem had been the “expected influence” measure, which can account for the edges with negative weights (<strong><em>see</em></strong> <a href="https://doi.org/10.1037/abn0000181" target="_blank">this</a>). Though, the overall interpretation limitation and the unreliability of these centrality measures remain as issues.</font><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p><font size="1">This is “an exaggerated emotional investment in the nation by believing that other groups insufficiently appreciate the nation’s exceptionality”.</font><a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p><font size="1">I can sense those who are familiar to the IICs raising their eyebrows after seeing the jiggly curves. I take full responsiblity for that :) This is a pooled sample, and in one of the sub-samples the response categories for national identification scale were different: 1-7 in contrast to 1-5. You don’t even wanna see the CCC’s. Though, take my word for it, don’t judge by the plots ;) this national identification scale has solid psychometric properties; try it with proper samples. I don’t think I’m messing up too much with the (accumulated) information here.</font><a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p><font size="1">Read this as “analysis based solely on association patterns without much of a penalization”.</font><a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p><font size="1">Nothing but the absolute sum of all edges in the network. The formal comparison relies on a permutation test to examine the invariance in the global strengths.</font><a href="#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
