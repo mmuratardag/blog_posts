@@ -3,7 +3,7 @@ output_dir: "."
 navbar:
   title: "M. Murat Ardag, Ph.D."
   left:
-    - text: "Go back to the data science website"
+    - text: "Go back to the data scientist website"
       href: https://mmuratardag.github.io
     - text: "Go back to the academic website"
       href: https://mmuratardag.github.io/academic_website
