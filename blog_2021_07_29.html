@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>MMA, Ph.D., BlogPost: 28/07/2021</title>
+
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">M. Murat Ardag, Ph.D.</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://mmuratardag.github.io">Go back to the data scientist website</a>
+</li>
+<li>
+  <a href="https://mmuratardag.github.io/academic_website">Go back to the academic website</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<div id="psychological-profiles-and-socio-demographics" class="section level1">
+<h1>Psychological profiles and socio-demographics …</h1>
+<div id="and-the-way-many-sociologists-political-scientists-and-psychologists-think-of-them" class="section level2">
+<h2>… and the way many sociologists, political scientists and psychologists think of them</h2>
+<div>
+<p>Many political scientists and sociologists emphasize the importance of socio-demographics (age, gender, education, income etc.) in social and political opinions. There are good reasons to place a premium on these attributes because they are valid proxies for what is sometimes referred to as the “Milieu”. From the perspective of many psychologists, though, socio-demographics is not exactly exciting. What might be more striking for a psychologist are psychological profiles, which are distinct and perhaps even disparate groups of people in populations with varying levels of traits that add up to qualitative differences. In other words, heterogeneity may not always be explained by “Milieu” but by psychological orientations.</p>
+</div>
+<div>
+<p>In a project with <a href="https://www.uni-marburg.de/en/fb04/team-cohrs/team/prof-dr-christopher-cohrs" target="_blank">Chris Cohrs</a>, we compare two psychological profile estimation techniques while uncovering the heterogeneity in the German national pride. One conventional technique we employ in this research is the latent profile analysis (LPA); the second and less commonly employed technique is the correlational class analyses or profiles with psychometric network models (Boutyline, 2017).</p>
+</div>
+<div>
+<p>We use the following survey items to estimate the profiles.</p>
+</div>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-mwys{border-color:inherit;font-family:serif !important;;font-style:italic;text-align:left;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-mwys" colspan="2">
+How proud are you of Germany in each of the following
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-fymr">
+Pde
+</td>
+<td class="tg-0pky">
+the way democracy works
+</td>
+</tr>
+<tr>
+<td class="tg-fymr">
+Piw
+</td>
+<td class="tg-0pky">
+political influence in the world
+</td>
+</tr>
+<tr>
+<td class="tg-fymr">
+Pec
+</td>
+<td class="tg-0pky">
+economic achievements
+</td>
+</tr>
+<tr>
+<td class="tg-fymr">
+Pss
+</td>
+<td class="tg-0pky">
+social security system
+</td>
+</tr>
+<tr>
+<td class="tg-fymr">
+Psc
+</td>
+<td class="tg-0pky">
+scientific and technological achievements
+</td>
+</tr>
+<tr>
+<td class="tg-fymr">
+Psp
+</td>
+<td class="tg-0pky">
+achievements in sports
+</td>
+</tr>
+<tr>
+<td class="tg-fymr">
+Par
+</td>
+<td class="tg-0pky">
+achievements in the arts and literature
+</td>
+</tr>
+<tr>
+<td class="tg-fymr">
+Paf
+</td>
+<td class="tg-0pky">
+armed forces
+</td>
+</tr>
+<tr>
+<td class="tg-fymr">
+Phi
+</td>
+<td class="tg-0pky">
+history
+</td>
+</tr>
+<tr>
+<td class="tg-fymr">
+Peq
+</td>
+<td class="tg-0pky">
+fair and equal treatment of all groups in society
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<div>
+<p>Among several discoveries, one thing that stands out in our findings is that while the LPA is good at revealing ordinal categories in psychological profiles, profile estimation with psychometric network models helps uncover ordinal categories of distinct groups. For example, have a look at the following visual.</p>
+</div>
+<br>
+<div>
+<div class="figure">
+<img src="ws_img/profiles.png" style="width:100.0%" alt="" />
+<p class="caption">Psychological Profiles Estimated with Different Techniques</p>
+</div>
+</div>
+<br>
+<div>
+<p>On the right, there are the profiles estimated with LPA: a technique that is nothing but model-based-clustering. LPA Profile 1 is simply an “all-items-below-the-mean” sub-group and LPA Profile 5 is the “all-items-above-the-mean” version. The in-between LPA profiles (profiles 2,3 &amp; 4) show meaningful qualitative differences. Every now and then, this might feel a bit anticlimactic, though. LPA is all about modeling and making sense of a multimodal distribution in the data by utilizing means, variances, and covariances for volume, shape, and orientation. This technique is great for revealing ordinal categories of profiles.</p>
+</div>
+<div>
+<p>In contrast, profile estimation with psychometric network models reveals sub-groups in the population by taking only different correlation patterns into account. This estimation technique has its pros and cons, though these pros &amp; cons are not the subjects of this blog-post. Nevertheless, the technique with the network paradigm seems to translate into uncovering nominal categories of psychological profiles.</p>
+</div>
+<div>
+<p>In this quasi-exploratory study, my coauthor and I wanted <br>(1) to check whether these estimated profiles are related to one another or not <br>(2) to know whether these estimated profiles are independent from socio-demographics + political orientation (where people are in the left-right spectrum).</p>
+</div>
+<div>
+<p>Since we are dealing with a mixture of ordinal and nominal categories (psychological profiles as well as socio-demographics) being related to one another, conventional associational techniques might be prone to shortcomings. Thus, a neural network approach to the rescue. A neural network is probably the best approach to predict nominal categories. Of course, the most significant disadvantage of the neural network approach is the inability to interpret the prediction meaningfully for a possible mechanism. Nonetheless, it is not a bad idea to think that if the LPA profiles predict network profiles with high accuracy, this is an indication that they may also be statistically related. The same hypothesis logic goes for socio-demographics predicting the psychological profiles estimated with different techniques. If the accuracy is high, then the profiles cannot be independent from the socio-demographics.</p>
+</div>
+<div>
+<p>The deep neural network structure used in the prediction is relatively straightforward. There are four dense layers before the target variable. Commonly used measures against overfitting are there as well (such as the l1 &amp; l2 regularizers, layer dropouts, and early stopping with the epocs; see the full code <a href="https://github.com/mmuratardag/blog_posts_rep_syntax/tree/main/2021_07_29" target="_blank">here</a>).</p>
+</div>
+<br>
+<div>
+<div class="figure">
+<img src="ws_img/dnn_results.png" style="width:100.0%" alt="" />
+<p class="caption">Deep Neural Network Results</p>
+</div>
+</div>
+<p><br></p>
+<div>
+<p>Judging from the low accuracies in both the training and test sets, we cannot predict profiles from one another, and socio-demographics + political orientation are not good predictors for either of these profiles estimated with different techniques. I see that as a “psychologists: 1 – sociologists &amp; political scientist: 0” situation. This finding indicates that estimated psychological profiles (regardless of the technique) are hardly related to socio-demographics and political orientation.</p>
+</div>
+<p>“Milieu” is undoubtedly noteworthy. However, psychological profiles may be much more informative compared to socio-demographics, especially for social and political attitudes that are hard to measure and operationalize. So next time a humdrum sociologist or a political scientist asks how the psychological profiles are convenient and different from diverse demographic groups in the population, tell the following.</p>
+<ul>
+<li>Firstly, psychological profiles capture a different sort of variation in data that are independent from socio-demographics.</li>
+<li>Secondly, socio-demographics’ effect on social and political attitudes is not very strong after all.</li>
+<li>Finally, a single-item self-report left-right scale for political orientation is far from perfect, use that with caution.</li>
+</ul>
+<p>Perhaps, for decades, we have been overrating socio-demographics. Perhaps it is time for political scientists and sociologists to broaden their scopes and start trying to integrate different research paradigms into the sociological and political science theories.</p>
+<p><br></p>
+</div>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<p>Boutyline, A. (2017). Improving the measurement of shared cultural schemas with correlational class analysis: Theory and method. Sociological Science, 4(15), 353-393.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
