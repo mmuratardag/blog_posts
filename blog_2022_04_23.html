@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>MMA, Ph.D., BlogPost: 22/04/2022</title>
+
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">M. Murat Ardag, Ph.D.</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://mmuratardag.github.io">Go back to the data scientist website</a>
+</li>
+<li>
+  <a href="https://mmuratardag.github.io/academic_website">Go back to the academic website</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<div id="coauthor-network-analysis-of-political-psychologists" class="section level1">
+<h1>Coauthor Network Analysis of Political Psychologists</h1>
+<div>
+<p>Many fellow data scientists ask me what political psychology is. I usually answer briefly by saying it is an interdisciplinary field studying political attitudes and behavior, mainly with the research methods of psychology. But of course, political psychology is more than that. Two broad questions can explain political psychology much better than a concise definition.</p>
+<ul>
+<li>Who are the political psychologists?</li>
+<li>What do they study?</li>
+</ul>
+<p>The latter question’s answer is for another blog post. Here I outline a broad answer to the former question with a coauthor network analysis of political psychologists.</p>
+</div>
+<div>
+<p>Coauthorship and citation analysis with networks provide fruitful insights into research and collaboration patterns in scientific communities. That is what <a href="https://doi.org/10.1111/pops.12656" target="_blank">Quayle et al. (2020)</a> had already done for the <a href="https://ispp.org/" target="_blank">International Society of Political Psychology</a>. They did this from a specific perspective<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. I borrow their idea and build upon it by expanding the coauthor network size.</p>
+</div>
+<div>
+<p>Below is the coauthor network of 6259 scholars who published political psychology work. The network has 8943 edges. In plain English, it is a network of 6259 individuals, and there is a tie between two individuals if they publish an academic piece together.</p>
+</div>
+<p><br> <img src="ws_img/p00.png" alt="Co-authorship network of political psychologists" /> <br></p>
+<div>
+<p>The Louvain community detection algorithm estimates 42 sub-groups, meaning individuals within these communities are more tightly connected to one another compared to the rest of the broader network. And here are the sizes of these communities.</p>
+</div>
+<p><br> <img src="ws_img/p01.png" alt="Network communities barplot" /> <br></p>
+<div>
+<p>Judging by the following centrality measures (think of them as the descriptive statistics of a network), I find seven communities noteworthy due to their degree (how many ties a scholar has) and betweenness (a scholar being in a hub- or bridge-like position in the network connecting multiple subunits).</p>
+</div>
+<p><br> <img src="ws_img/p02.png" alt="Centrality measures boxplots" /> <br></p>
+<div>
+<p>I choose communities 4, 5, and 6 because they have quite a few obvious outliers for degree – community 6 also entails interesting extreme outliers in betweenness. Communities 1, 11, 12, and 15 are the extremes of betweenness outliers.</p>
+</div>
+<div>
+<p>Below is a functionally useless snapshot of the selected communities.</p>
+</div>
+<p><br> <img src="ws_img/p03.png" alt="Selected communities" /> <br></p>
+<div>
+<p>I only bothered to collect attributes (characteristics of individuals/scholars) on the top 25 nodes with the highest degrees. So we are looking at the sliced-out communities of the broad network with 175 scholars out of the total 6259. The only attributes I included are the country of the university the scholar is affiliated with, the principal field/discipline of the scholar, whether the scholar is male/female, and professor/nonprofessor.</p>
+</div>
+<div>
+<p>Let’s start with Community 1’s top-25, which looks like a transdisciplinary group of scholars mostly located in US &amp; Canada.</p>
+</div>
+<div>
+<iframe src="comm_01.html" height="800" width="1000" frameborder="0" allowfullscreen allow="autoplay" data-external="1">
+</iframe>
+</div>
+<div>
+<p>All scholars in this community are professors; most are male.</p>
+</div>
+<p><br> <img src="ws_img/p04_2.png" alt="Community 1 node attributes" /> <br></p>
+<div>
+<p>The top-25 of Community 4 looks comparatively international to me – kudos! Good for you, good for political psychology in general!</p>
+</div>
+<div>
+<iframe src="comm_04.html" height="800" width="1000" frameborder="0" allowfullscreen allow="autoplay" data-external="1">
+</iframe>
+</div>
+<div>
+<p>Again, comparatively speaking, this community is doing pretty well in terms of gender and professor/nonprofessor balance. Well done once again! Turns out this community is all psychologists.</p>
+</div>
+<p><br> <img src="ws_img/p05_2.png" alt="Community 4 node attributes" /> <br></p>
+<div>
+<p>Scholars in Australia dominate the top-25 of Community 5, and again many are psychologists.</p>
+</div>
+<div>
+<iframe src="comm_05.html" height="800" width="1000" frameborder="0" allowfullscreen allow="autoplay" data-external="1">
+</iframe>
+</div>
+<div>
+<p>Here is Community 5’s top-25 with their other attributes.</p>
+</div>
+<p><br> <img src="ws_img/p06_2.png" alt="Community 5 node attributes" /></p>
+<div>
+<p>Moving on to Community 6’s top-25, who are the close neighbors of Community 5.</p>
+</div>
+<div>
+<iframe src="comm_06.html" height="800" width="1000" frameborder="0" allowfullscreen allow="autoplay" data-external="1">
+</iframe>
+</div>
+<div>
+<p>So, for the top-25 of Community 6, we are looking at mostly male psychology professors.</p>
+</div>
+<p><br> <img src="ws_img/p07_2.png" alt="Community 6 node attributes" /></p>
+<div>
+<p>The top-25 scholars of Community 11 are a group of comparative politics scholars, predominantly located in Germany.</p>
+</div>
+<div>
+<iframe src="comm_11.html" height="800" width="1000" frameborder="0" allowfullscreen allow="autoplay" data-external="1">
+</iframe>
+</div>
+<div>
+<p>The ratio of professor/nonprofessor male/female is again discouraging, but hey, at least there are multiple disciplines.</p>
+</div>
+<p><br> <img src="ws_img/p08_2.png" alt="Community 11 node attributes" /></p>
+<div>
+<p>Community 12’s top-25 scholars are the second transdisciplinary group; many works at American universities.</p>
+</div>
+<div>
+<iframe src="comm_12.html" height="800" width="1000" frameborder="0" allowfullscreen allow="autoplay" data-external="1">
+</iframe>
+</div>
+<div>
+<p>Here is the breakdown of the disciplines and gender and professional rank ratio for Community 12’s top-25.</p>
+</div>
+<p><br> <img src="ws_img/p09_2.png" alt="Community 12 node attributes" /></p>
+<div>
+<p>Below is the final subgroup – the top-25 scholars of Community 15 – a psychologist-dominant group mostly working in US universities.</p>
+</div>
+<div>
+<iframe src="comm_15.html" height="800" width="1000" frameborder="0" allowfullscreen allow="autoplay" data-external="1">
+</iframe>
+</div>
+<div>
+<p>And here is the final plot for the node attributes of Community 15’s top-25.</p>
+</div>
+<p><br> <img src="ws_img/p10_2.png" alt="Community 15 node attributes" /></p>
+<div>
+<p>Now, I must admit, it is a bit disheartening to replicate the main findings of Quayle et al. (2020) with a different and larger sample. But, hey, on the one hand, it is what it is, and you can’t argue with the facts. On the other hand, I found Community 4; the top-25 scholars there with the highest degrees don’t look super WEIRD to me instantly.</p>
+</div>
+<div>
+<p>Before elaborating on what explains the network structure, let’s first digest the extremity the centrality measures reveal. 72 % of the scholars in the network have only one tie (connected to one other scholar); 10 % of the scholars have two ties, and this 82% contributes to the median of 1 tie. Let’s read it from a different perspective: 1091/6259 scholars have 3 or more ties, and they are all outliers. One scholar is connected to 60 coauthors, one to 43, one 41; three to 39, another to 38, another to 37…</p>
+</div>
+<div>
+<p>Well, of course, these kinds of extremities are the norm in social networks, no jaw-dropper. What then explains the network structure? That is a question we can answer with exponential random graph models.</p>
+</div>
+<div>
+<p>I tried a bunch of models with arbitrarily formulated hypotheses. Below are the MCMC diagnostics of network structure explained by</p>
+<ul>
+<li>edges (network density) + triangles (third node connecting triadic relationships)</li>
+<li>edges + gwesp (geometrically weighted edgewise shared partnerships – a fancy way of modeling triads)</li>
+<li>edges + node degree 2 (scholars with 2 ties)</li>
+<li>edges + node degree 3</li>
+<li>edges + minimum 2 degrees</li>
+<li>edges + minimum 3 degrees</li>
+</ul>
+</div>
+<div>
+<p>All MCMC diagnostics except edges + node degrees 3 model suck. And I don’t necessarily dig the edges’ MCMCs on the edges + node degrees 3 model, but that may also improve with more iterations.</p>
+</div>
+<div class="figure">
+<img src="ws_img/13_mod_edges_2deg.png" alt="" />
+<p class="caption">MCMC Diagnostics</p>
+</div>
+<div class="figure">
+<img src="ws_img/14_mod_edges_3deg.png" alt="" />
+<p class="caption">MCMC Diagnostics</p>
+</div>
+<div>
+<p>Finally, here are the goodness of fit plots of two models with 2 and 3 degrees, just as a gratuitous benchmark.</p>
+</div>
+<p><img src="ws_img/17_1_gof_mod_edges_2deg.png" alt="GoF" /> <img src="ws_img/17_2_gof_mod_edges_2deg.png" alt="GoF" /></p>
+<p><img src="ws_img/18_1_gof_mod_edges_3deg.png" alt="GoF" /> <img src="ws_img/18_2_gof_mod_edges_3deg.png" alt="GoF" /></p>
+<div>
+<p>I am not noting any takeaways from these findings. I’m sure you’ll have your own takeaway if you are an academic working in the broad field of political psychology. What I’d say is, though, node attributes on every scholar in the network (not only the top-25 of selected communities) would make the analyses more informative. This additional data collection process is a bit trickier and time-consuming and is not worth the effort of a blog post.</p>
+</div>
+<div>
+<p>That being said, this should give some interested fellow data scientists an impression of who political psychologists are. What they study? That’s a question for another blog post.</p>
+</div>
+<div id="references" class="section level4">
+<h4>References</h4>
+<p>Quayle, M., Pautz, N. and Mhlongo, B. (2020), A Coauthorship Analysis of Internationalization in Political Psychology Through the Lens of ISPP Dissemination Activities. Political Psychology, 41: 901-921. <a href="https://doi.org/10.1111/pops.12656" class="uri">https://doi.org/10.1111/pops.12656</a> <br> <br></p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><font size="1">They find that 30 years of ISPP publications predominantly originate from WEIRD (Western, Educated, Industrialized, Rich, and Democratic) countries. There are signs of non–WEIRDness in annual meeting papers, however deep internationalization is still far away.</font><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
