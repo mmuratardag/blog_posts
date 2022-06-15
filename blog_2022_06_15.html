@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>MMA, Ph.D., BlogPost: 15/06/2022</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">M. Murat Ardag, Ph.D.</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://mmuratardag.github.io">Go back to the data scientist website</a>
+</li>
+<li>
+  <a href="https://mmuratardag.github.io/academic_website">Go back to the academic website</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<div id="what-do-political-psychologists-study" class="section level1">
+<h1>What do political psychologists study?</h1>
+<div>
+<p>I usually get asked what political psychology is in the tech sector.
+I answer briefly by saying it is an interdisciplinary field studying
+political attitudes and behavior, mainly with the research methods of
+psychology. That is sort of a brush-off answer, though. The best way of
+describing political psychology is by answering the following
+questions.</p>
+</div>
+<ul>
+<li>Who are the political psychologists?</li>
+<li>What do they study?</li>
+</ul>
+<div>
+<p>In an <a href="blog_2022_04_23.html">earlier blog post</a>, I gave a
+glimpse of who political psychologists are. In this post, I am answering
+the latter question.</p>
+</div>
+<div>
+<p>To do that, I pulled a sample of 1382 academic article abstracts
+published between 1979 – 2022 from two prominent political psychology
+journals – namely <a
+href="https://onlinelibrary.wiley.com/journal/14679221"
+target="_blank">Political Psychology</a> and <a
+href="https://jspp.psychopen.eu/index.php/jspp" target="_blank">Journal
+of Social &amp; Political Psychology</a>.</p>
+</div>
+<div>
+<p>God knows how many topics the best solution would be for summarizing
+the text content. Also, the abstracts are truncated, so your typical
+topic models would run into many pitfalls. Instead of going down that
+rabbit hole, I clustered article titles to have a heuristic idea of what
+I was looking at. I’d say anywhere between 10-14 is plausible – not a
+bad start.</p>
+</div>
+<br> <img src="ws_img/00_mds_plot.png"
+alt="MDS clustering of documents" />
+<div>
+<p>In the next step, I obtained the following result after trying
+bi-term topic models on the titles.</p>
+</div>
+<p><br> <img src="ws_img/02_BTM_t14.png"
+alt="bi-term topic model results" /></p>
+<div>
+<p>Topic modeling for short texts is super practical. In our case, it
+gives a good glimpse of what might be in there but is not fully
+informative.</p>
+</div>
+<div>
+<p>I kept digging with one of my favorite techniques for text
+visualization: a text landscape, also known as the text map. It looks a
+little something like the following.</p>
+</div>
+<p><br> <img src="ws_img/03_txt_map.png" alt="text landscape" /></p>
+<div>
+<p>The text landscape graph is pretty and informative to an eye familiar
+with the political psychology literature. It should also give an
+outsider an impression of political psychology as well.</p>
+</div>
+<div>
+<p>That being said, the interpretation of this type of graph borders on
+aridity. Plus, it is potentially misleading.</p>
+</div>
+<div>
+<p>If you give this info a push with a semi-supervised topic model
+(keyword-assisted topic models, preceded by a fully unsupervised model),
+things become neater. Plus, we can check model fit and examine
+diagnostics.</p>
+</div>
+<div>
+<p>Turns out I can account for 23 topics (+ 5 residual topics). Quite a
+few more topics than what the EDA hinted at. Here is a snapshot from the
+dictionary I used.</p>
+</div>
+<p><br> <img src="ws_img/06_sstm_dic_kw.png"
+alt="semi-supervised topic model dictionary" /></p>
+<div>
+<p>Well, clearly, there is some overfitting, as can be seen from the
+log-likelihood and perplexity, but hey, I am a political psychologist; I
+have a good guestimate of which research topics from the literature
+probably ended up in the sample and which n-grams are associated with
+the research topics.</p>
+</div>
+<p><br> <img src="ws_img/07_1_model_diag_1.png"
+alt="model diagnıstics" /></p>
+<div>
+<p>Below are the alphas, which are stabilizing just fine for almost all
+topics except the genial topic which is supposed to encapsulate all the
+frequent vocabulary.</p>
+</div>
+<p><br> <img src="ws_img/07_2_model_diag_2.png"
+alt="model diagnıstics" /></p>
+<div>
+<p>And finally, the probabilities of words drawn from the keyword
+topic-word distribution are pretty good.</p>
+</div>
+<p><br> <img src="ws_img/08_top_word_prob.png"
+alt="tm topic-word distro" /></p>
+<div>
+<p>So, what do political psychologists study? What did we find in the
+texts?</p>
+</div>
+<div>
+<p>Attitude-behavior link and how they change; political socialization;
+emotions &amp; sentiments in politics, specific theories about values
+&amp; morality, voting behavior sometimes intersecting with behavioral
+economics (prospect theory, rational choice etc.); collective action,
+political communication; political ideology; political participation;
+conflict resolution and reconciliation; a lot of individual-differences
+stuff (personality, specific traits like social dominance orientation,
+right-wing authoritarianism); conspiracy beliefs; international
+relations &amp; security; inter-group relations; prejudice; leadership
+style; gender in politics and of course recently Covid.</p>
+</div>
+<div>
+<p>I think that should provide a broad perspective to an outsider.</p>
+</div>
+<div id="bonus-1" class="section level3">
+<h3>BONUS 1:</h3>
+<div>
+<p>It looks to me like this sample is missing some early works (70s-80s)
+that had a lot of psychoanalytic stuff; niche topics within inter-group
+relations like national identity, nationalistic &amp; patriotic
+attitudes; some more recent populism stuff; small-group dynamics
+(decision-making in small groups – mostly relevant for foreign policy
+decision-making); transdisciplinary work involving biology, neuroscience
+and genetics (works using twin and family samples).</p>
+</div>
+</div>
+<div id="bonus-2" class="section level3">
+<h3>BONUS 2:</h3>
+<div>
+<p>I only sampled specific pol psy journals. There are dozens of other
+journals that publish pol psy work. Below are three specific article
+selections from other journals.</p>
+<ul>
+<li>One of my all-time-favorite: <a
+href="https://journals.sagepub.com/doi/abs/10.1177/0956797613495244"
+target="_blank">https://journals.sagepub.com/doi/abs/10.1177/0956797613495244</a>
+<ul>
+<li>One of the simplest, least invasive, and most elegant designs I have
+ever come across. The experimental treatment is drinks containing either
+carbohydrates or an artificial sweetener manipulating blood glucose
+levels. Social welfare attitudes are measured. Reported results indicate
+that experimentally induced low blood glucose is associated with
+stronger support for social welfare (hungrier subjects want others to
+share resources). However, this increased support for social welfare
+does not translate into sharing behavior in a lab game involving
+resources (hungrier subjects do not tend to share resources
+themselves).</li>
+</ul></li>
+<li>A natural experiment leveraging a Twitter purge of malicious bots in
+July 2018: <a href="https://doi.org/10.1017/S0003055420000817"
+target="_blank">https://doi.org/10.1017/S0003055420000817</a>
+<ul>
+<li>The work inquires which politicians benefit most from the bots and
+reveals that compared to the other party families, the radical right
+(particularly anti-EU) used to benefit more from malicious bots before
+the purge.</li>
+</ul></li>
+<li>Finally, a meticulous work one operationalization and score
+calculation: <a href="https://doi.org/10.1017/S0003055419000807"
+target="_blank">https://doi.org/10.1017/S0003055419000807</a>
+<ul>
+<li>Researchers examine different measurement instruments tapping into
+the same attitudes (with multiple dimensions) by applying different
+score calculation techniques. The work outlines the consequences of
+measurement-concept inconsistencies and how that leads to wrong
+inferences.</li>
+</ul></li>
+</ul>
+</div>
+<div id="references" class="section level4">
+<h4>References</h4>
+<p>Aarøe, L., &amp; Petersen, M. B. (2013). Hunger Games: Fluctuations
+in Blood Glucose Levels Influence Support for Social Welfare.
+Psychological Science, 24(12), 2550–2556. <a
+href="https://doi.org/10.1177/0956797613495244"
+class="uri">https://doi.org/10.1177/0956797613495244</a></p>
+<p>SILVA, B., &amp; PROKSCH, S. (2021). Fake It ‘Til You Make It: A
+Natural Experiment to Identify European Politicians’ Benefit from
+Twitter Bots. American Political Science Review, 115(1), 316-322. <a
+href="doi:10.1017/S0003055420000817"
+class="uri">doi:10.1017/S0003055420000817</a></p>
+<p>WUTTKE, A., SCHIMPF, C., &amp; SCHOEN, H. (2020). When the Whole Is
+Greater than the Sum of Its Parts: On the Conceptualization and
+Measurement of Populist Attitudes and Other Multidimensional Constructs.
+American Political Science Review, 114(2), 356-374. <a
+href="doi:10.1017/S0003055419000807"
+class="uri">doi:10.1017/S0003055419000807</a></p>
+<div>
+<p><br></p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
