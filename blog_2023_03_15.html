@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>MMA, Ph.D., BlogPost: ../03/2023</title>
+
+<script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">M. Murat Ardag, Ph.D.</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://mmuratardag.github.io">Go back to the data scientist website</a>
+</li>
+<li>
+  <a href="https://mmuratardag.github.io/academic_website">Go back to the academic website</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<div
+id="sharing-knowledge-not-hoarding-it-tackling-organizational-silos"
+class="section level1">
+<h1>Sharing Knowledge, Not Hoarding It: Tackling Organizational
+Silos</h1>
+<div id="survey-results-from-stack-overflow-2022"
+class="section level2">
+<h2>Survey results from Stack Overflow 2022</h2>
+<div>
+
+</div>
+<div>
+<p>Is your organization caught up in a knowledge silos situation?</p>
+</div>
+<div>
+<p>Knowledge silos in the workplace can lead to a lack of innovation and
+productivity. When employees are isolated from each other, they are less
+likely to share ideas and collaborate, leading to stagnation and missed
+growth opportunities. Knowledge silos lead to a duplication of effort,
+which is a waste of resources. When employees are not aware of what
+others are working on, they tend to end up duplicating work that has
+already been done, leading to inefficiency and wasted time.</p>
+</div>
+<div>
+<p>Knowledge silos are usually a result of lack of communication and
+coordination. When employees are focused only on their own team’s goals,
+they may not be aware of how their work impacts others in the
+organization, leading to miscommunication and missed deadlines.</p>
+</div>
+<div>
+<p>Even worse, knowledge silos lead to a lack of trust and a sense of
+“us vs. them” mentality in the workplace. When different teams are in an
+unhealthy competition and get caught up in knowledge silos, they may
+begin to view each other with suspicion and resentment, leading to a
+toxic work environment.</p>
+</div>
+<div>
+<p>Tackling knowledge silos is essential for organizations that want to
+remain competitive. To stay ahead of the curve, companies need to be
+agile and able to respond quickly to changes in the market. This
+requires collaboration and the free flow of information across
+departments and teams.</p>
+</div>
+<div id="how-prevalent-are-knowledge-silos-in-the-tech-sector"
+class="section level3">
+<h3>How prevalent are knowledge silos in the tech sector?</h3>
+<div>
+<p>Stack Overflow’s annual community survey offers data on the most
+frequently utilized technologies, tools, and frameworks within the
+developer and data practitioner communities. The 2022 survey features
+questions on attitudes towards knowledge silos and the frequency of
+seeking assistance outside of the immediate team. Find out more at <a
+href="https://survey.stackoverflow.co/2022" target="_blank">here</a>. I
+start by quoting the website:</p>
+</div>
+<p><br></p>
+<div>
+<center>
+<font size="2"> <strong><em>“Nearly half of all respondents report that
+knowledge silos prevent them from getting ideas from across the
+organization and that waiting for answers to questions often causes
+interruptions and disrupts their workflow - with little difference
+between independent contributors and people managers.”</em></strong>
+</font>
+</center>
+</div>
+<p><br></p>
+<div>
+<p>Let’s go beyond this. The survey has &gt;73.000 participants. Though,
+when filtered to actively working community members and removing the
+missing values, you can get a sample of 25.642 individuals with various
+job titles. The job titles and corresponding sample sizes are shown in
+the figure below.</p>
+</div>
+<p><br> <img src="ws_img/ins_cul_sc1.png" alt="job titles" /></p>
+<div>
+<p>In addition to standard demographics such as age, gender, and
+education level, the survey includes items on specific roles,
+organizational size, years of experience, and mental health. Mental
+health is operationalized as self-reported mood or emotional disorders,
+anxiety disorders, learning disabilities, concentration problems, or
+autism. If any of these conditions are reported, there is a mental
+health issue; otherwise, not. The plot below shows the percentages of
+participants with and without mental health issues across different
+roles and organization sizes.</p>
+</div>
+<p><br> <img src="ws_img/ins_cul_sc2.png"
+alt="sample characteristics" /></p>
+<div>
+<p>The following variables went into the analysis.</p>
+</div>
+<table>
+<colgroup>
+<col width="22%" />
+<col width="77%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong><em>Please rate your level of agreement with the following
+statements</em></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>I have interactions with people outside of my immediate team.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Knowledge silos prevent me from getting ideas across the
+organization (i.e., one individual or team has information that isn’t
+shared with others)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>I can find up-to-date information within my organization to help me
+do my job.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>I am able to quickly find answers to my questions with existing
+tools and resources.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>I know which system or resource to use to find information and
+answers to questions I have.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>I often find myself answering questions that I’ve already answered
+before.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Waiting on answers to questions often causes interruptions and
+disrupts my workflow.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><strong><em>How frequently do you experience each of the
+following?</em></strong></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Needing help from people outside of your immediate team?</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Interacting with people outside of your immediate team?</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Encountering knowledge silos (where one individual or team has
+information that’s not shared or distributed with other individuals or
+teams) at work?</td>
+</tr>
+<tr class="even">
+<td>Age</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Gender</td>
+<td>Coded as other, man, woman</td>
+</tr>
+<tr class="even">
+<td>Education level</td>
+<td>Coded as low, high, higher</td>
+</tr>
+<tr class="odd">
+<td>Work Experience</td>
+<td>How many years of working experience do you have?</td>
+</tr>
+<tr class="even">
+<td>Organization size</td>
+<td>Approximately how many people are employed by the company or
+organization you currently work for?</td>
+</tr>
+<tr class="odd">
+<td>IC vs. PM</td>
+<td>Are you an independent contributor or a people manager?</td>
+</tr>
+<tr class="even">
+<td>Mental health</td>
+<td>Which of the following describe you, if any? Please check all that
+apply.</td>
+</tr>
+</tbody>
+</table>
+<div>
+<p>I threw all these variables in a Bayesian learning network (BLN) to
+determine the structural relationships. BLN is a powerful tool that
+allows for modeling complex relationships between variables. In a
+nutshell, the outcome outlines the causal skeleton of the mechanisms by
+representing the probabilistic independencies/dependencies between
+variables.</p>
+</div>
+<div>
+<p>The following plot should make it intuitive. The nodes in the network
+are the survey items; the edges are the parameterized relationships –
+the coefficients are displayed with negative or positive signs.</p>
+</div>
+<div>
+<iframe src="path_model_cont.html" height="800" width="1000" frameborder="0" allowfullscreen allow="autoplay" data-external="1">
+</iframe>
+</div>
+<p><font size="1"> BLM output displays the structural relationships
+across variables. All paths show standardized coefficients. The layout
+is optimized for coefficient visibility and cause -&gt; effect order. It
+may look a bit cluttered at first glance but let me walk you through it.
+Read on. </font></p>
+<div>
+<p>Let’s start with age, gender, and education level: they do not impact
+anything whatsoever, so they are disconnected from the network.</p>
+</div>
+<div>
+<p>The graph shows the three most central outcomes at the bottom. The
+following three items have the highest incoming centrality measures in
+the network (many other items in the network predict these items – these
+are the most central outcomes).</p>
+</div>
+<ul>
+<li><strong><em>Needing help from people outside of your immediate
+team</em></strong></li>
+<li><strong><em>Encountering knowledge silos</em></strong></li>
+<li><strong><em>I often find myself answering questions that I already
+answered before</em></strong></li>
+</ul>
+<div>
+<p>The frequency of needing help from outside the immediate team is
+somewhat neutral. More interaction outside the team has the strongest
+positive association with this outcome. Yet, many paths lead to this
+outcome; many are straightforward: i.e. managers have more frequent
+contact outside their immediate team (very weak relationship, though
+with a 0.03 coefficient). Knowing where to look has a weak negative
+association (-0.05). These are negligible paths. The size of the
+organization has an indirect negative (coefficients) path via “
+<strong><em>I know which system or resource to use to find information
+&amp; answers to questions I have</em></strong> ”. In other words, the
+larger the organization, the harder it is to access relevant
+information; however, the more you know about where to find the relevant
+info, the less frequent contact you have outside of the immediate
+team.</p>
+</div>
+<div>
+<p>Though, the same outcome of the “ <strong><em>high frequency of
+needing help outside of the immediate team</em></strong> ” also has a
+dark side. This item is also predicted by the frequency of encountering
+knowledge silos and having to wait for answers and workflow
+interruptions.</p>
+</div>
+<div>
+<p>The frequency of encountering knowledge silos is the most central
+outcome; it is predicted by 7 other variables in the network. There are
+four strong predictors of this outcome, the strongest being the “
+<strong><em>knowledge silos preventing individuals from getting ideas
+across the organization</em></strong> ” item. Another strong positive
+path is from “ <strong><em>frequency of interacting with people outside
+of immediate team</em></strong> ” to the high knowledge silos
+encountering frequency. Those who complain about having to wait for
+answers and workflow interruptions are the ones encountering knowledge
+silos frequently. Not being able to find quick answers to their
+questions also leads to frequent knowledge silos barriers.</p>
+</div>
+<div>
+<p>Finally, the strongest path to “ <strong><em>I often find myself
+answering questions that I already answered before</em></strong> ” is
+again “ <strong><em>waiting for answers that cause workflow
+interruptions</em></strong>”. “ <strong><em>Knowledge silos preventing
+individuals from getting ideas across</em></strong> ” is the other
+strong predictor of repeating oneself. Perhaps one other noteworthy
+finding is that there is also a direct path from the independent
+contributor vs. manager item to this self-repetition item, which
+probably indicates that managers tend to repeat themselves more; my
+guess is that managers do this for multiple stakeholders.</p>
+</div>
+<div>
+<p>In short, these three central outcomes suggest that there is a lot of
+wasted valuable time and effort in some of the work environments and
+interactions.</p>
+</div>
+<div>
+<p>Let’s move on to the most central predictors (the items with the most
+outgoing edges; causing multiple things). These are the following.</p>
+</div>
+<ul>
+<li><strong><em>I have interactions with people outside of my immediate
+team</em></strong></li>
+<li><strong><em>I am able to quickly find answers to my questions with
+existing tools and resources</em></strong></li>
+<li><strong><em>Knowledge silos prevent me from getting ideas across the
+organization</em></strong></li>
+<li>Mental health</li>
+</ul>
+<div>
+<p>Let’s again treat “ <strong><em>I have interactions with people
+outside of my immediate team</em></strong> ” as a neutral statement and
+focus on the other three.</p>
+</div>
+<div>
+<p>Those who strongly endorse the “ <strong>I am able to quickly find
+answers to my questions with existing tools and resources</strong> ”
+statement are pretty high on “ <strong>I know which system or resource
+to use to find information and answers to questions I have</strong> ”
+and “ <strong><em>I can find up-to-date information within my
+organization to help me do my job</em></strong> ”. Those who are quick
+to find answers to their questions with existing tools and resources are
+the ones who do not frequently encounter knowledge silos, they don’t
+have to wait for answers, which cause workflow interruptions, and they
+also don’t report that knowledge silos prevent them from getting ideas
+across.</p>
+</div>
+<div>
+<p>Those who suffer from knowledge silos (preventing from getting ideas
+across) report waiting on answers and having to repeat themselves. The
+frequency of their knowledge silo encounter is high, and they cannot
+find the information they need. Again, wasted valuable time.</p>
+</div>
+<div>
+<p>Finally, mental health is a central predictor, but its predictive
+power is relatively low. The strongest connection from mental health to
+the rest of the network is a negative path to “I am able to quickly find
+answers to my questions with existing tools and resources”. So, those
+suffering from mental health issues report being unable to find answers
+quickly with the existing tools and resources.</p>
+</div>
+<div>
+<p>The overall picture reveals a major potential problem: the waste of
+time caused by knowledge silos and the lack of efficient communication
+within organizations.</p>
+</div>
+<div>
+<p>Knowledge silos hinder productivity, diminish innovation, cost money,
+lead to low employee engagement, and ultimately lead to negative
+customer experience.</p>
+</div>
+</div>
+<div id="what-can-be-done-to-prevent-knowledge-silos"
+class="section level3">
+<h3>What can be done to prevent knowledge silos?</h3>
+<div>
+<p>First of all, this is a broad organizational culture issue, and I
+will recite something that I learned at Hofstede Insights: there is no
+universal culture that is best for all organizations. The appropriate
+culture is contingent on context and strategic goals. The optimal
+culture for an organization should align with its business goals, and an
+organization’s culture should support its strategy. Otherwise, there is
+a misalignment, an incongruence, or a disconnect.</p>
+</div>
+<div>
+<p>If an organization promotes competition among teams, then it is
+natural for information to be withheld. On the other hand, if an
+organization promotes cooperation, then knowledge silos are an
+obstacle.</p>
+</div>
+<div>
+<p>If an organization wants to eliminate knowledge silos, it is best to
+incentivize collaboration. There are multiple ways of achieving this,
+such as restructuring teams for cross-reporting, and providing
+cross-training opportunities to foster stronger and more meaningful
+relationships across employees. Incentivizing collaboration and
+promoting transparency also enables different teams to understand how
+their work impacts others and the business as a whole.</p>
+</div>
+<p><br> <br></p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
