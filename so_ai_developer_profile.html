@@ -59,8 +59,18 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.zoomable').forEach(img => {
+      img.onclick = function() {
+        this.classList.toggle('zoomed');
+      };
+    });
+  });
+</script>
 
 
+<link rel="stylesheet" href="so_ai_developer_profile.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -105,20 +115,81 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><br> <br> <br> <br> <br> <img src="ws_img/blog.jpg" style="width:25%; margin-right: 20px" align="left"> <br> <br> <br> <br> <br> <br> <br></p>
-<p>26/12/2024: <a href="so_ai_developer_profile.html">Part 1: Developer Profiles with 2024 Stack Overflow Developer Survey</a></p>
-<p>15/03/2023: <a href="blog_2023_03_15.html">Sharing Knowledge, Not Hoarding It: Tackling Organizational Silos – Survey results from Stack Overflow 2022</a></p>
-<p>15/06/2022: <a href="blog_2022_06_15.html">What do political psychologists study?</a></p>
-<p>23/04/2022: <a href="blog_2022_04_23.html">Coauthor network analysis of political psychologists</a></p>
-<p>09/01/2022: <a href="blog_2022_01_09.html">What was the highlight of my Ph.D.&nbsp;work?</a></p>
-<p>29/07/2021: <a href="blog_2021_07_29.html">Psychological profiles, socio-demographics and political orientation, and the way many sociologists, political scientists and psychologists think of them</a></p>
-<p>08/03/2021: <a href="blog_2021_03_08.html">Visualizing vDEM democracy scores using plotly…</a></p>
-<p>26/04/2020: <a href="blog_2020_04_26.html">An informal benchmarking within psychometrics: attitude network approach vs.&nbsp;the general SEM framework using German national identity as an example</a></p>
-<p>02/12/2019: Ultra-short version of Collective Narcissism Scale for the <a href="https://collectivenarcissism.com/" target="_blank">Prejudice Lab at Goldsmiths, University of London</a>. Pdf version <a href="https://collectivenarcissism.com/blog/3item_cns" target="_blank">here</a>; HTML version <a href="PODETR_IRT_data.RData.html">here</a>.</p>
-<p>09/06/2019: <a href="blog_2019_06_09.html">Juxtaposing psychometrics, topic modeling, and social network analysis to model competing nationalist discourses</a></p>
-<p>16/04/2019: <a href="blog_2019_04_16.html">semtree vs.&nbsp;network tree</a></p>
+<section id="part-1-developer-profiles-with-2024-stack-overflow-developer-survey" class="level1">
+<h1>Part 1: Developer Profiles with 2024 Stack Overflow Developer Survey</h1>
+<section id="why-it-is-a-good-idea-to-focus-on-the-individuals-instead-of-companies" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-is-a-good-idea-to-focus-on-the-individuals-instead-of-companies">Why it is a good idea to focus on the individuals instead of companies:</h2>
+<p>When discussing AI, we often focus on the companies involved. However, the diversity of human attitudes towards AI plays a crucial role in shaping the development and governance of AI systems. Therefore, it is essential to understand the profiles of individual AI developers, as these professionals directly impact how AI systems are developed and governed. Unlike government regulators, tech professionals have immediate influence over AI use cases and company policies. Despite their significant impact on AI systems that affect societies, we have limited knowledge about developer attitudes towards AI.</p>
+<p>This gap in understanding is particularly significant when considering how developers’ diverse backgrounds influence their approach to AI development and adoption. The annual StackOverflow Developer Survey is a pragmatic start to addressing this gap.</p>
+</section>
+<section id="the-annual-stack-overflow-developer-survey" class="level2">
+<h2 class="anchored" data-anchor-id="the-annual-stack-overflow-developer-survey">The Annual Stack Overflow Developer Survey</h2>
+<p>Stack Overflow has long been the primary resource for developers until the generative AI boom. You have probably seen the news about the drastic drop in the site’s traffic with the introduction of chatbots like ChatGPT. In the spring of 2024, Stack Overflow announced a partnership with OpenAI in which Stack Overflow will provide vetted technical content through OverflowAPI to enhance OpenAI’s models, while OpenAI will integrate Stack Overflow’s validated knowledge directly into ChatGPT with proper attribution. The deal has caused controversy among the Stack Overflow community: a considerable number of contributors expressed anger and protest over using their contributions to train AI models. While the annual Developer Survey from 2024 is likely to reflect some of this drama, the data is as valuable as always and includes quite a few items on AI usage and attitudes toward AI.</p>
+</section>
+<section id="the-sample" class="level2">
+<h2 class="anchored" data-anchor-id="the-sample">The sample</h2>
+<p>Using the survey items on AI, I estimated profiles from two broad territories, namely, developers from the US &amp; Europe. Of the participants surveyed, 31% reported living in the US. As for the European sample, 14% of the developers are from Germany, 9% from the UK, 6% from France, and the remaining 40% come from various other European countries. Almost 1/3 of this sample consists of full-stack developers, while back-end developers (16 %) hold the second most common role. These two are followed by students (8 %) and front-end developers (5 %). The percentages of all remaining developer roles range from 0.01% to 5%.</p>
+</section>
+<section id="analyses" class="level2">
+<h2 class="anchored" data-anchor-id="analyses">Analyses</h2>
+<section id="latent-variables" class="level3">
+<h3 class="anchored" data-anchor-id="latent-variables">Latent variables</h3>
+<p>An exploratory graph analysis of 47 items reveals seven dimensions (read as latent variables). The figure below illustrates the items under analysis, along with the estimated dimensions and their corresponding labels. The nodes represent the survey items, while the edges indicate the associations between these items. Node colors reflect the estimated underlying latent constructs. In other words, the identified latent constructs (dimensions) are a good and accurate psychometric summary of the 47 items on AI.</p>
+<p><img src="ws_img/so_ai_developer_profile/AI_items_network_gg.png" class="zoomable" alt="AI-items modeled as a network"></p>
+<p>These latent constructs tap into various aspects of AI usage and attitudes toward AI. For example, <strong><em>AI Improves Productivity &amp; Efficiency in Company</em></strong> reflects the belief that the adoption of AI by the developer’s company has led to higher productivity and efficiency. <strong><em>AI Tool Development Confidence in Complex Tasks</em></strong> measures the stance on AI adoption, trust in its accuracy, and confidence in AI handling complex tasks. All the other labels should be self-explanatory.</p>
+</section>
+<section id="profiles" class="level3">
+<h3 class="anchored" data-anchor-id="profiles">Profiles</h3>
+<p>I utilized all these seven latent variables along with an additional latent variable that measures overall job satisfaction to estimate five distinct developer profiles. Here is what I discovered.</p>
+<ul>
+<li>Job satisfaction within this sample is generally low.</li>
+<li>AI usage in production is minimal across all profiles.</li>
+</ul>
+<p>See the visual below to form a picture in your head before I list a few brief details about each profile.</p>
+<p><img src="ws_img/so_ai_developer_profile/profiles.png" class="zoomable" alt="Estimated profiles"></p>
+<ul>
+<li>The profile ratios in the sample are quite similar across territories.</li>
+</ul>
+<p><img src="ws_img/so_ai_developer_profile/sample_characteristics_profile_by_country.png" class="img-fluid"></p>
+<section id="profile-1-the-optimizer" class="level4">
+<h4 class="anchored" data-anchor-id="profile-1-the-optimizer">Profile 1: the Optimizer</h4>
+<p>This profile is the most common, representing 47% of the sample. I mentioned that the sample is dominated by full-stack, back-end, front-end developers &amp; students. Well… after these roles, the most common professions are developers of “Mobile Apps”, “Desktop or Enterprise Apps”, “Embedded Applications or Devices”, and “Academic Researcher”. This profile is an optimizer. The AI adoption and general orientation towards AI are balanced; there is 0 or almost 0 usage of AI in production and project planning.</p>
+</section>
+<section id="profile-2-the-blindly-confident-evangelist" class="level4">
+<h4 class="anchored" data-anchor-id="profile-2-the-blindly-confident-evangelist">Profile 2: the Blindly Confident Evangelist</h4>
+<p>12 % of the sample is represented by this profile; I am sure you have come across the type. There is an unwavering faith in AI’s ability to handle complexity. However, in contrast, scores on everything else are very, very low. For this profile, three roles stand out besides the sample’s most frequent developer types: “Academic Researcher,” “Research &amp; Development Role,” and “Data Engineer”.</p>
+</section>
+<section id="profile-3-the-cautious-limited-moderate" class="level4">
+<h4 class="anchored" data-anchor-id="profile-3-the-cautious-limited-moderate">Profile 3: the Cautious, Limited, Moderate</h4>
+<p>The percentage of this profile is another 12 %. This profile is relatively conservative in adopting broad AI solutions. We also observe moderate levels of confidence in AI handling complex tasks and moderate concerns about AI ethics and governance. My guess is that the general orientation is shaped by the opposing narratives around AI: AI the savior vs.&nbsp;AI the destructor! So, what are the most frequent roles besides the usual suspects of the sample, you ask? “Engineering Manager”, “DevOps Specialist”, “Academic Researcher” and “Data Engineer”.</p>
+</section>
+<section id="profile-4-the-holistic-adopter" class="level4">
+<h4 class="anchored" data-anchor-id="profile-4-the-holistic-adopter">Profile 4: the Holistic Adopter</h4>
+<p>14 % of the sample is classified as this profile that embraces AI across multiple domains—from content generation, learning, and search to documenting and testing. The profile is characterized by high scores on thinking AI improves company productivity &amp; efficiency and AI usage in content generation, learning &amp; search. Compared to other profiles, this profile has the highest scores in AI usage for documenting &amp; testing and in project planning with AI. “Data Scientist or Machine Learning Specialist” is the most frequent role following the sample’s most frequent developer types.</p>
+</section>
+<section id="profile-5-the-disengaged" class="level4">
+<h4 class="anchored" data-anchor-id="profile-5-the-disengaged">Profile 5: the Disengaged</h4>
+<p>17% of the sample is disengaged from anything related to AI, with minimal scores on every dimension. The percentages of developer types are similar to the first profile: the optimizer.</p>
+</section>
+</section>
+<section id="finally" class="level3">
+<h3 class="anchored" data-anchor-id="finally">Finally…</h3>
+<p>If you want to reverse the order and see the developer roles by profiles, the chart below is all yours to stare at.</p>
+<p><img src="ws_img/so_ai_developer_profile/sample_characteristic_dev_by_prof.png" class="zoomable" alt="Developer role by profile"></p>
+</section>
+<section id="and-there-is-an-app-for-it" class="level3">
+<h3 class="anchored" data-anchor-id="and-there-is-an-app-for-it">… and … There is an app for it!</h3>
+<p>Hmm.. what’s that?.. You are intrigued and want to know which of these profiles you might be?.. Well.. lucky you… there is an app for that! Go to the following link, respond to the 64 items, and learn your profile. It should take &lt;10 minutes.</p>
+<p><a href="https://stack-overflow-developer-profiler-2024.streamlit.app/" target="_blank">https://stack-overflow-developer-profiler-2024.streamlit.app/</a></p>
+<p>In Part 2 of this blog post, we’ll talk about causality. I’ll add the link later. Hope you come back to read that as well.</p>
+<section id="get-in-touch-if-you-want-to-chat-more-about-the-technical-psychological-profiles-of-developers." class="level5">
+<h5 class="anchored" data-anchor-id="get-in-touch-if-you-want-to-chat-more-about-the-technical-psychological-profiles-of-developers.">Get in touch if you want to chat more about the technical &amp; psychological profiles of developers. <a href="https://mmuratardag.github.io/contact.html">📬</a></h5>
 
 
+</section>
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
