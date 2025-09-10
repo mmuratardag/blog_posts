@@ -1,4 +1,3 @@
-# Repo hosting the blog posts shared by
+# Repo hosting the blog posts at
 
-### https://mmuratardag.github.io/
-### https://mmuratardag.github.io/academic_website
+### https://mmuratardag.github.io/blog_posts
